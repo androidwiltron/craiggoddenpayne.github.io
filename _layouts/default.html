@@ -8,22 +8,37 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/simple-grid.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+<style type="text/css">
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
 
+.site-info {
+  margin-top: 2rem;
+}
+.wrapper-footer {
+  margin-top: 2rem;
+}
+.post {
+  margin-top: 1rem;
+}
+</style>
+
+  <body>
+      <div class="container">
+        <header class="row">
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+            <h1 class="site-name">Craig Godden-Payne</a></h1>
+            <p class="site-description">Software Engineer</p>
           </div>
 
           <nav>
@@ -32,17 +47,20 @@
           </nav>
         </header>
       </div>
-    </div>
 
     <div id="main" role="main" class="container">
-      {{ content }}
+        {{ content }}
     </div>
 
     <div class="wrapper-footer">
       <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+        <div class="row">
+          <div class="col-6">
+            <footer class="footer">
+              {% include svg-icons.html %}
+            </footer>
+          </div>
+        </div>
       </div>
     </div>
 
