@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HacManchester 2017
+image: /assets/img/hackman.jpg
 ---
 <p align="center">
   <img src="/assets/img/hackman.jpg" alt="Hack Manchester"/>

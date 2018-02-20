@@ -5,16 +5,25 @@ layout: default
 <article class="post">
   <div class="author-card">
     <img src="{{site.baseurl}}/assets/avatar.jpg" alt="Craig">
-    <h4>This post was written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a> on {{ page.date | date: "%B %e, %Y" }} - <a href="https://craig.goddenpayne.co.uk{{page.id}}">[Permalink]</a> </h4>   <br />        
-    {% capture time %}{{ content | reading_time }}{% endcapture %}
-    <p>This article will take {{ time }} {% if time == '1' %}minute{% else %}minutes{% endif %} to read.</p>
+    <h4>This post was written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a> on {{ page.date | date: "%B %e, %Y" }}</h4>   <br />        
+    <p class="readtime">
+      {% if page.readtime == null %}
+        I hope you enjoy this post!
+      {% else %}
+        This article will take {{page.readtime}} to read.
+      {% endif %}
+      <a href="https://craig.goddenpayne.co.uk{{page.id}}">[Permalink]</a>
+    </p>
   </div>
   <h1>{{ page.title }}</h1>
   <div class="entry">
     {{ content }}
   </div>                              
   <div class="date">
-      Written on {{ page.date | date: "%B %e, %Y" }}      
+    <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
+    <p>Please share and spread the word!</p>
+    <div class='oss-widget-interface'></div> 
   </div>
+  
   {% include disqus.html %}
 </article>

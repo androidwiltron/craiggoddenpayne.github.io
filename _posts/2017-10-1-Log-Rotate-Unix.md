@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Log Rotate in Unix
+image: /assets/img/2017-10-1-log-rotate-unix/logrotate.jpg
 ---
 <p align="center">
-  <img src="/assets/img/2017-10-1-log-rotate-unix/logrotate.jpg" alt="Log Rotate"/>
+  <img src="" alt="Log Rotate"/>
 </p>
 Recently I've been doing some work with analytics and tracking and came across log rotation in Linux.
 

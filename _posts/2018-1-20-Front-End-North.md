@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Front End North Conference 2018
+image: /assets/img/2018-1-20-front-end-north/frontendnorth.png
+
 ---
 <p align="center">
   <img src="/assets/img/2018-1-20-front-end-north/frontendnorth.png" alt="FEN"/>
