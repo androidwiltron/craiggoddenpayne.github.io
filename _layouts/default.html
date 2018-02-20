@@ -1,138 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/simple-grid.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    
-    <!-- code prettyfy-->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/prism.css" />
-    <script src="{{ site.baseurl }}/assets/prism.js"></script>
-
-
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-  </head>
-
-<style type="text/css">
-* {
-  font-family: 'Raleway', sans-serif!important;
-  font-style: normal;
-}
-h1 {
-  font-size: 1.5rem;  
-}
-h2 {
-  font-size: 1.2rem;
-}
-p {
-  padding: 0.5em;
-}
-.site-info {
-  margin-top: 2rem;
-}
-.wrapper-footer {
-  margin-top: 2rem;
-}
-.post {
-  margin-top: 1rem;  
-}
-
-.col-6 {
-  display: inline-block;
-}
-
-.articlecontainer {
-  height:25rem;
-}
-.articlecontainer img {
-  max-width: 80%;
-  max-height: 15rem;
-}
-
-.center {
-    margin: auto;
-    width: 50%;    
-}
-
-.author-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
-  width:100%;
-  display: inline-block;
-  padding:1rem;
-}
-.author-card img, .author-card h4 {
-  display: inline-block;
-}
-.author-card img {
-  max-width: 4rem;
-}
-
-
-.author-title {
-  color: grey;
-}
-
-.written-by {
-  -moz-box-shadow: 0 0 5px #ccc;
-  -webkit-box-shadow: 0 0 5px #ccc;
-  box-shadow: 0 0 5px #ccc;
-  margin-bottom: 3rem;
-}
-
-.footer {
-  background-color: darkgray;
-  width: 100%;
-  padding-top:3rem;
-  -moz-box-shadow: 0 0 5px #ccc;
-  -webkit-box-shadow: 0 0 5px #ccc;
-  box-shadow: 0 0 5px #ccc;
-}
-
-</style>
-
+  <head>    
+    {% include meta.html %}    
+    {% include scripts.html %}    
+    {% include styles.html %}
+  </head>  
   <body>
-      <div class="container">
-        <header class="row">
-          <div class="site-info">
-            <h1 class="site-name">Craig Godden-Payne</a></h1>
-            <p class="site-description">Software Engineer</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    <div>
-    </div>
+    {% include header.html %}    
     <div id="main" role="main" class="container">
         {{ content }}
     </div>
-
-    <div class="wrapper-footer">
-            <footer class="footer">
-              <div class="container">
-                <div class="row">
-                    {% include svg-icons.html %}
-                    <p>
-                        Craig Godden-Payne
-                    </p>
-                </div>
-              </div>
-            </footer>            
-    </div>
-
-    {% include analytics.html %}
-    <script id="dsq-count-scr" src="//craiggoddenpayne.disqus.com/count.js" async></script>
+    {% include footer.html %}
+    {% include endscripts.html %}    
   </body>
 </html>
