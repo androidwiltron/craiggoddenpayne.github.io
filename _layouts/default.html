@@ -45,10 +45,16 @@ p {
   margin-top: 1rem;  
 }
 
-img {
-  max-width: 100%;
-    max-height:15rem;
-    height: auto;
+.col-6 {
+  display: inline-block;
+}
+
+.articlecontainer {
+  height:25rem;
+}
+.articlecontainer img {
+  max-width: 80%;
+  max-height: 15rem;
 }
 
 .center {
@@ -56,8 +62,39 @@ img {
     width: 50%;    
 }
 
-.articlecontainer{
-  height: 24rem;
+.author-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  width:100%;
+  display: inline-block;
+  padding:1rem;
+}
+.author-card img, .author-card h4 {
+  display: inline-block;
+}
+.author-card img {
+  max-width: 4rem;
+}
+
+
+.author-title {
+  color: grey;
+}
+
+.written-by {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 3rem;
+}
+
+.footer {
+  background-color: darkgray;
+  width: 100%;
+  padding-top:3rem;
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
 }
 
 </style>
@@ -76,23 +113,26 @@ img {
           </nav>
         </header>
       </div>
-
+    <div>
+    </div>
     <div id="main" role="main" class="container">
         {{ content }}
     </div>
 
     <div class="wrapper-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
             <footer class="footer">
-              {% include svg-icons.html %}
-            </footer>
-          </div>
-        </div>
-      </div>
+              <div class="container">
+                <div class="row">
+                    {% include svg-icons.html %}
+                    <p>
+                        Craig Godden-Payne
+                    </p>
+                </div>
+              </div>
+            </footer>            
     </div>
 
     {% include analytics.html %}
+    <script id="dsq-count-scr" src="//craiggoddenpayne.disqus.com/count.js" async></script>
   </body>
 </html>

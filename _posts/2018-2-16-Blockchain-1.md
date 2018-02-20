@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blockchain - Part 1
+tags: blockchain dlt
 ---
 
 <p align="center">
