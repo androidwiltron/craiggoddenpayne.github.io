@@ -2,11 +2,9 @@
 layout: post
 title: Front End North Conference 2018
 image: /assets/img/2018-1-20-front-end-north/frontendnorth.png
+readtime: 13 minutes
 
 ---
-<p align="center">
-  <img src="/assets/img/2018-1-20-front-end-north/frontendnorth.png" alt="FEN"/>
-</p>
 I went for a day trip to sheffield to attend the FrontEndNorthConference
 
 In summary, it looks like we are already doing what the rest of the industry suggests as best practices, although there were some interesting things I learned whilst there.

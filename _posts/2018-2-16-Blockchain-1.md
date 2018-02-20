@@ -6,7 +6,6 @@ tags: blockchain dlt
 readtime: 5 minutes
 ---
 
-![blockchain](/assets/img/2018-2-16-blockchain/blockchain.jpg)
 I've recently been taking a course on blockchain, as it's something that I find quite interesting. Blockchains have recently gained popularity in several industries, and although I am yet to use them in my day to day, it's something I can definitely see comin in the near term.
 
 Blockchains can solve problems and create efficiencies in tech areas such as privacy, security and data sharing. Blockchains help to move away from the centralized "one source of truth" monolith database, that most companies have. In fact in almost every job I have had, there is always a huge, single production database, that contains all the business critical data, and if it were to go down, there would be chaos.
