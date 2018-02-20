@@ -7,8 +7,9 @@ layout: default
     {% for post in site.posts %}
     <div class="col-6 articlecontainer">
       <article class="post">        
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-        <div class="entry">          
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>        
+        <div>
+          <img src="{{ post.image }}"></img>
         </div>
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       </article>

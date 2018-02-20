@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blockchain - Part 1
+image: /assets/img/2018-2-16-blockchain/blockchain.jpg
 tags: blockchain dlt
 ---
 
