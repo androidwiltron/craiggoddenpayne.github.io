@@ -2,19 +2,19 @@
 layout: postlayout
 ---
 
-<article class="post">
+<article class="post container">
   <div class="post-card">
-    <h1>{{ page.title }}</h1>
+    <h1 class="textlarge">{{ page.title }}</h1>
     <img src="{{page.image}}"></img>  
-    <h4>This post was written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a> on {{ page.date | date: "%B %e, %Y" }}</h4>   <br />        
-      <p class="readtime">
+    <h4 class="textsmall">Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a>, {{ page.date | date: "%B %e, %Y" }}</h4>   <br />        
+      <h4 class="textsmall">
         {% if page.readtime == null %}
           I hope you enjoy this post!
         {% else %} 
           Reading this will take about {{page.readtime}}.
         {% endif %}
         <div class='oss-widget-interface'></div>
-      </p>
+      </h4>
   </div>
   <div class="entry">
     {{ content }}

@@ -20,9 +20,7 @@ DTL could be summed up in through points:
 - Transactions that change the ledger state
 - Protocol to allow transactions to be accepted
 
-<p align="center">
-  <img src="/assets/img/2018-2-16-blockchain/p2p.jpg" alt="p2p"/>
-</p>
+![p2p](/assets/img/2018-2-16-blockchain/p2p.jpg)
 
 A blockchain will track various assets transactions. The transactions are are grouped into blocks. There be any number of these transactions in a block. Nodes on the blockchain network group up the transactions and send them through the network. They are synced up by an agreement by all peers, and eventually each node will contain an up to date version of the ledger. Blockchain just basically a P2P distributed ledger, which is ruled by smart contracts. Smart contracts are just predefined actions that are performed when certain conditions are met.
 
@@ -32,9 +30,7 @@ Blockchain is in a basic form, a chronological chain of blocks of transactions, 
 
 Bitcoin is a good example to explain this in more detail:
 
-<p align="center">
-  <img src="/assets/img/2018-2-16-blockchain/bitcoin.jpg" alt="bitcoin"/>
-</p>
+![bitcoin](/assets/img/2018-2-16-blockchain/bitcoin.jpg)
 
 Miner nodes bundle unconfirmed and valid transactions into a block. The miners must then solve a cryptographic challenge, to propose the next block. People refer to this as "proof of work".
 
