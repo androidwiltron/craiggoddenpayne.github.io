@@ -3,7 +3,6 @@ layout: post
 title: Front End North Conference 2018
 image: /assets/img/2018-1-20-front-end-north/frontendnorth.png
 readtime: 13 minutes
-
 ---
 I went for a day trip to sheffield to attend the FrontEndNorthConference
 

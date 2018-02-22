@@ -1,5 +1,4 @@
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />    
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/simple-grid.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">        
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/prism.css" />    
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
@@ -9,16 +8,40 @@
     font-family: 'Raleway', sans-serif!important;
     font-size: medium;
   }
+  .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:1rem;
+  }
 
   img {
     max-width: 100%;
-    padding:0.5rem;
+    padding:0.5rem;    
   }
   
   p {
     font-size: medium;
     padding: 0.5em;
+    line-height: 2rem;
   }
+
+  h1{
+    font-size: xx-large;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  h2{
+    font-size: x-large;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  h3{
+    font-size: large;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .site-info {
     margin-top: 2rem;
   }
@@ -48,24 +71,7 @@
   }
   .right {
     float:right;
-  }
-  
-  .post-card {
-    box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.4);
-    background-color: lightblue;
-    width:100%;
-    display: inline-block;
-    padding:1rem;
-  }
-  .post-card img, .post-card h4 {
-    display: inline-block;
-  }
-  .post-card img {
-    padding:1rem;
-    max-width: 100%;
-    margin: 0rem;
-  }
-  
+  }  
   
   .author-title {
     color: grey;
@@ -77,8 +83,7 @@
   .textlarge {
     font-size: x-large;
   }
-  
-  
+ 
   .footer {
     background-color: darkgray;
     width: 100%;

@@ -2,28 +2,33 @@
 layout: postlayout
 ---
 
-<article class="post container">
-  <div class="post-card">
+<article class="post">
     <h1 class="textlarge">{{ page.title }}</h1>
     <img src="{{page.image}}"></img>  
-    <h4 class="textsmall">Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a>, {{ page.date | date: "%B %e, %Y" }}</h4>   <br />        
-      <h4 class="textsmall">
-        {% if page.readtime == null %}
-          I hope you enjoy this post!
-        {% else %} 
-          Reading this will take about {{page.readtime}}.
-        {% endif %}
-        <div class='oss-widget-interface'></div>
-      </h4>
-  </div>
-  <div class="entry">
-    {{ content }}
-  </div>                              
-  <div class="date">
-    <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
-    <p>Please share and spread the word!</p>
-    <div class='oss-widget-interface'></div> 
-  </div>
-  
+        <section>
+          <div class="post-icon">
+            <img src="/assets/avatar.jpg" />
+          </div>      
+          <div class="post-detail">
+            <h4 class="textsmall">Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a>, {{ page.date | date: "%B %e, %Y" }}</h4>         
+              <h4 class="textsmall">
+                {% if page.readtime == null %}
+                  I hope you enjoy this post!
+                {% else %} 
+                  Reading this will take about {{page.readtime}}.
+                {% endif %}
+              </h4>
+          </div>                        
+          <div class='oss-widget-interface'></div>          
+        </section>
+
+        <div class="entry">
+            {{ content }}
+          </div>          
+          <div class="date">
+              <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
+              <p>Please share and spread the word!</p>
+              <div class='oss-widget-interface'></div> 
+            </div>
   {% include disqus.html %}
 </article>
