@@ -113,8 +113,92 @@ box-sizing is supported in almost all browsers, but it is still safest to use th
 
 Media queries are probably the most important tool when it comes to responsive design. It allows you to apply styles based on screen size.
 
-exmaple
-http://learnlayout.com/media-queries.html
+
+```html
+<style>
+@media screen and (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+}
+.mediaquery-container{
+
+}
+</style>
+<div class="mediaquery-container">
+<nav>
+Home
+Directions
+Contact
+</nav>
+<section>
+Now when you resize your browser it's even cooler than ever!
+</section>
+<section>
+The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim.
+</section>
+</div>
+```
+
+<style>
+@media screen and (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+}
+.mediaquery-container{
+
+}
+
+.mediaquery-container-small{
+  width:300px;
+}
+</style>
+<div class="mediaquery-container">
+<nav>
+Home
+Directions
+Contact
+</nav>
+<section>
+Now when you resize your browser it's even cooler than ever!
+</section>
+<section>
+The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim.
+</section>
+</div>
+
+<div class="mediaquery-container-small">
+<nav>
+Home
+Directions
+Contact
+</nav>
+<section>
+Now when you resize your browser it's even cooler than ever!
+</section>
+<section>
+The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim.
+</section>
+</div>
 
 ## column
 
@@ -151,11 +235,10 @@ flex; and flex-{*} properties, you are looking at the current (as of this writin
   .flexcontainer {
     display: -webkit-flex;
     display: flex;
-    background-color: #eee;
+    background-color: #eee;    
   }
   nav {
-    width: 100px;
-    background-color: #ccc;
+    width: 100px;    
   }
   .flex-column {
     -webkit-flex: 1;
