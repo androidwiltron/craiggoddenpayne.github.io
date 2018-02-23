@@ -9,14 +9,14 @@ layout: postlayout
 	width: 100%;
 }
 
-.sidebar{
+.sidebar {
 	order: 1;
-	flex: 1;
-  width:0;
+	flex: 0;
+  width:4rem;
   flex-basis: auto;
 }
 
-.main{
+.author {
 	order: 1;
 	flex: 5;
   padding-top:0.5rem;
@@ -37,7 +37,7 @@ layout: postlayout
   .post {
     margin-top: 1rem;  
   }
-  .post .sidebar img {
+  .post .image img {
     width: 4rem;
   }
   .post-detail {
@@ -54,20 +54,22 @@ layout: postlayout
     border-bottom-color:#eee;
     
   }
-
+  .oss-widget-interface{
+    padding-bottom: 0.5rem;
+  }
 </style>
   
-<article class="post">
-    <div class='oss-widget-interface'></div>              
-    <header>
-    <h1 class="textlarge">{{ page.title }}</h1>
-      <img src="{{page.image}}" class="img-center"></img>  
-    </header>
+<article>
+  <div class="post">
+    <h1 style="font-size:xx-large">{{ page.title }}</h1>
+    <img src="{{page.image}}" class="img-center"></img>
+    <div class='oss-widget-interface'></div>                
+    
     <div class="flexbox-container">
-      <div class="sidebar">
+      <div class="image">
           <img src="/assets/avatar.jpg" />
       </div>
-      <div class="main">
+      <div class="author">
           <h4>Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a></h4>
           <h4>On {{ page.date | date: "%B %e, %Y" }}</h4>         
           <h4 class="reading-time">
@@ -88,5 +90,6 @@ layout: postlayout
       <p>Please share and spread the word!</p>
       <div class='oss-widget-interface'></div> 
     </div>
+  </div>
   {% include disqus.html %}
 </article>

@@ -2,21 +2,64 @@
 layout: default
 ---
 
-<div class="container">
-  <div class="posts row">
-    {% for post in site.posts %}
-    <div class="col-6 articlecontainer">
-      <article class="post">        
-        <div class="center">
-          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-            <div class="row">
-                <img src="{{ post.image }}"></img>
-              </div>    
-            <h1>{{ post.title }}</h1>        
-          </a>
-        </div>
-      </article>
-    </div>
-    {% endfor %}
+<style>
+    
+.post-container {
+  display: inline-block;
+}
+.flexbox-container{
+	display: flex;
+	width: 50%;
+}
+
+.flexbox-container img {
+  max-width: 20rem;
+  width: 20rem;
+  flex-direction: row;
+  margin:0;
+}
+.image{
+	order: 1;
+	flex: 0;
+  width:100%;
+  max-width: 100%;
+  flex-basis: auto;
+}
+
+a {
+  color: #000;
+}
+
+.main{
+  width:100%;
+}
+.main p {
+  font-size: medium;
+  padding: 0!important;
+  line-height: 1.2rem;
+}
+
+.oss-widget-interface{
+  padding-bottom: 0.5rem;
+}
+
+</style>
+
+{% for post in site.posts %}
+<div class="post-container">
+  <div class="flexbox-container">
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
+      <div class="image">
+          <img src="{{ post.image }}"></img>
+      </div>
+      <div class="main">            
+          <p>{{ post.title }}</p>                
+          <p>{{ post.date | date: "%B %e, %Y" }}.</p>        
+      </div>  
+    </a>
   </div>
 </div>
+{% endfor %}
+
+<div class='oss-widget-interface'></div>                
+{% include disqus.html %}  
