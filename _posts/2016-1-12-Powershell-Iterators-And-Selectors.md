@@ -1,3 +1,9 @@
+---
+layout: post
+title: Mob Programming
+image: /assets/img/2016-1-12-Powershell-Iterators-And-Selectors/powershell.jpg
+---
+
 Powershell Selectors and Iterators Cheatsheet
 
 Powershell Selectors and Iterators Cheatsheet

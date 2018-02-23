@@ -1,3 +1,9 @@
+---
+layout: post
+title: Mob Programming
+image: /assets/img/2017-1-25-Mob-Programming/mob.jpg
+---
+
 Last night I attended a session on Mob Programming and Working well together, with guest speaker Woody Zuill, who claims to be one of the founders of the practice. The session was at the coop digital building at Federation House in Manchester city centre.
 
 

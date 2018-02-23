@@ -1,3 +1,9 @@
+---
+layout: post
+title: App Insights Analytics
+image: /assets/img/2017-2-9-appinsights-analytics/analytics.jpg
+---
+
 I've been playing around with azure app insights analytics again. I focused on seeing if there is a way that i could work out a users journey through a website, using simple query. I know this is easy to do with Google analytics, but I thought I would see if I could do something similar with azure app insights offering.
 
 ```bash
