@@ -15,10 +15,7 @@ Blockchains can solve problems and create efficiencies in tech areas such as pri
 Since as far back as I can remember, we have always been trying to move away from centralised computing, and splitting software into smaller chunks, microservices and moving into the cloud. One thing that always remains is a huge monolith database. I've seen this change slightly into smaller, domain specific databases and stores, but usually there is still a single point where everything comes together.
 
 
-A blockchain is a type of distributed ledge technology, which basically means it is a data structure which resides across multiple computing devices, typically spread across multiple devices and regions. DLTs existed before bitcoin, but bitcoin brought together some of the core ideas, with regards to timestamping, P2P, crytography and sharing the computing power. A good description of a
-
-
-DTL could be summed up in through points:
+A blockchain is a type of distributed ledge technology, which basically means it is a data structure which resides across multiple computing devices, typically spread across multiple devices and regions. DLTs existed before bitcoin, but bitcoin brought together some of the core ideas, with regards to timestamping, P2P, crytography and sharing the computing power. A good description of a DTL could be summed up in through points:
 
 - Data structure that captures the current state of a ledger
 - Transactions that change the ledger state
