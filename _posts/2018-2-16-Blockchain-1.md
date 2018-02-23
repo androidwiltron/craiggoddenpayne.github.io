@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blockchain - Part 1
+title: Blockchain
 image: /assets/img/2018-2-16-blockchain/blockchain.jpg
 tags: blockchain dlt
 readtime: 5 minutes
