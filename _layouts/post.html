@@ -2,33 +2,91 @@
 layout: postlayout
 ---
 
-<article class="post">
-    <h1 class="textlarge">{{ page.title }}</h1>
-    <img src="{{page.image}}"></img>  
-        <section>
-          <div class="post-icon">
-            <img src="/assets/avatar.jpg" />
-          </div>      
-          <div class="post-detail">
-            <h4 class="textsmall">Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a>, {{ page.date | date: "%B %e, %Y" }}</h4>         
-              <h4 class="textsmall">
-                {% if page.readtime == null %}
-                  I hope you enjoy this post!
-                {% else %} 
-                  Reading this will take about {{page.readtime}}.
-                {% endif %}
-              </h4>
-          </div>                        
-          <div class='oss-widget-interface'></div>          
-        </section>
+<style>
+  
+.flexbox-container{
+	display: flex;
+	width: 100%;
+}
 
-        <div class="entry">
-            {{ content }}
-          </div>          
-          <div class="date">
-              <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
-              <p>Please share and spread the word!</p>
-              <div class='oss-widget-interface'></div> 
-            </div>
+.sidebar{
+	order: 1;
+	flex: 1;
+  width:0;
+  flex-basis: auto;
+}
+
+.main{
+	order: 1;
+	flex: 5;
+  padding-top:0.5rem;
+}
+
+@media (max-width: 480px){
+	.container{
+		display: flex;  
+		width: 100%;
+  	}
+	.box2{
+		order: 2;	}
+	.box1{
+		order: 1;
+	}
+}
+
+  .post {
+    margin-top: 1rem;  
+  }
+  .post .sidebar img {
+    width: 4rem;
+  }
+  .post-detail {
+    padding-top:1rem;
+  }
+  .post-detail h4 {
+    font-size: small;
+  }
+  .reading-time {
+    color:#888;
+    padding-top:0.2rem;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color:#eee;
+    
+  }
+
+</style>
+  
+<article class="post">
+    <div class='oss-widget-interface'></div>              
+    <header>
+    <h1 class="textlarge">{{ page.title }}</h1>
+      <img src="{{page.image}}" class="img-center"></img>  
+    </header>
+    <div class="flexbox-container">
+      <div class="sidebar">
+          <img src="/assets/avatar.jpg" />
+      </div>
+      <div class="main">
+          <h4>Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a></h4>
+          <h4>On {{ page.date | date: "%B %e, %Y" }}</h4>         
+          <h4 class="reading-time">
+            {% if page.readtime == null %}
+              I hope you enjoy this post!
+            {% else %} 
+              Reading this will take about {{page.readtime}}.
+            {% endif %}
+          </h4>
+        </div><br/> 
+      </div>  
+    </div>
+    <div class="entry">
+      {{ content }}
+    </div>          
+    <div class="date">
+      <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
+      <p>Please share and spread the word!</p>
+      <div class='oss-widget-interface'></div> 
+    </div>
   {% include disqus.html %}
 </article>
