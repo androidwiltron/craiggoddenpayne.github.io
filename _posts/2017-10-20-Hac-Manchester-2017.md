@@ -2,6 +2,7 @@
 layout: post
 title: HacManchester 2017
 image: /assets/img/2017-10-20-Hac-Manchester-2017/hackman.jpg
+readtime: 7 minutes
 ---
 GCHQ Winners, Hack Street's Back!
 
