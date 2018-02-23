@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HacManchester 2017
-image: /assets/img/hackman.jpg
+image: /assets/img/2017-10-20-Hac-Manchester-2017/hackman.jpg
 ---
 GCHQ Winners, Hack Street's Back!
 
@@ -19,7 +19,7 @@ We decided to take on the GCHQ challenge, because it seemed the most interesting
 We came up with a concept of a product called Beacon.
 
 
-![raspberrypi](/assets/img/raspberrypi.jpg)
+![raspberrypi](/assets/img/2017-10-20-Hac-Manchester-2017/raspberrypi.jpg)
 
 
 It is a voice-activated device that listened for a particular keyword and notified the emergency services. There would be a web interface for the emergency services to track outstanding calls, and an app that received a push notification when it was triggered and allowed users to cancel the call.
@@ -33,7 +33,7 @@ We had a long-running process that listened for sound starting and ending, then 
 The web UI was written using react.js and used API Gateway to get outstanding calls and delete them. The app could also do the same, using the same API Gateway. The web UI is intended to be used as the police HQ for tracking and managing emergency requests.
 
 
-![infrastructure](/assets/img/beacon-infra.png)
+![infrastructure](/assets/img/2017-10-20-Hac-Manchester-2017/beacon-infra.png)
 
 
 Apart from some early struggles with the Pi itself, getting all these components talking to each other was actually fairly straight-forward. Lex in particular was very easy to get set up working for our simple use-case, and a shout out to the in-built testing framework in the AWS Lambda console, which made testing / debugging the function much easier than I thought it would be.
@@ -52,7 +52,7 @@ Hack Manchester is a great event that the organisers put their heart and soul in
 So when we were short-listed for the GCHQ prize, we suddenly felt like it was going to be last year all over again, until the winners were announced... Hack Street's Back! Here we are, collecting our prizes of an Apple TV 4K (64GB) and the much sought after GCHQ puzzle book:
 
 
-![gchq](/assets/img/gchq.png)
+![gchq](/assets/img/2017-10-20-Hac-Manchester-2017/gchq.png)
 
 
 In the day-to-day as a developer, your time is spent (quite rightly) planning your work, writing unit tests, managing CI / CD pipelines, all in the name of quality and stability. Having 25 hours to hack something together (that with a bit of luck will work when you show the judges) is good for the soul. Also, getting outside our usual tech stack and trying out things like Raspberry Pi, node.js and various server-less AWS services was really exciting, and a great eye-opener.
@@ -61,4 +61,4 @@ In the day-to-day as a developer, your time is spent (quite rightly) planning yo
 If you're reading this and thinking about entering a team for Hack Manchester 2018, then I'd strongly recommend it. Though be warned, we'll be back defending our title...
 
 
-![winners](/assets/img/hacman-winners.jpg)
+![winners](/assets/img/2017-10-20-Hac-Manchester-2017/hacman-winners.jpg)
