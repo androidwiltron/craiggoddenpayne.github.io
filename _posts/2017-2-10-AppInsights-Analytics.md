@@ -1,7 +1,7 @@
 ---
 layout: post
 title: App Insights Analytics
-image: /assets/img/2017-2-9-Appinsights-Analytics/appinsights.jpg
+image: /assets/img/2017-2-10-AppInsights-Analytics/appinsights.jpg
 readtime: 3 minutes
 ---
 
