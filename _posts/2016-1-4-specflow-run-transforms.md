@@ -32,4 +32,4 @@ So it turns out there's a secret node, not in the XSD I was given for SpecRun (T
 Here is the code I used to fix my concurrent issues. Hope this helps someone else in the future!
 
 
-Here is some more information on the node in question: (github) [https://github.com/gasparnagy/berp/blob/master/examples/gherkin/feature_files/RelocateConfigurationFile.feature]
+Here is some more information on the node in question: [git hub](https://github.com/gasparnagy/berp/blob/master/examples/gherkin/feature_files/RelocateConfigurationFile.feature
