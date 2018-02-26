@@ -8,6 +8,34 @@
     font-family: 'Raleway', sans-serif!important;
     font-size: medium;
   }
+  #main, article {
+    width:100%!important;
+  }
+
+  /* hide weird disquss tracking area*/
+  [data-tracking-area='layout'] {
+    display:none;
+  }
+
+
+  /*prism mobile ajustments*/
+  .code-toolbar {
+    word-wrap: break-word;  
+    white-space: normal!important; 
+    overflow-x: auto;
+    white-space: nowrap;    
+    margin:0;
+  }
+  .highlighter-rouge{
+    width: 100%;
+    margin:0;
+  }
+  code[class*="language-"], pre[class*="language-"] {
+    width:100%;
+    margin:0;
+  }
+
+
   .container {
     max-width: 800px;
     margin-left: auto;
