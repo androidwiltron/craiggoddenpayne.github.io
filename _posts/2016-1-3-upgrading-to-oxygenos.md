@@ -12,7 +12,7 @@ I decided to give OxygenOS a go, which is OnePlusOnes own take on CyanogenMod. H
 
 
 The build I used was the official v1 of OxygenOS, which can be downloaded here:
-http://oxygenos.oneplus.net/oxygenos_1.0.0.zip
+[download](http://oxygenos.oneplus.net/oxygenos_1.0.0.zip)
 
 
 You have to make sure all the data is backed up before starting, as the flashing process will wipe the data from the drive. The image needs to be flashed manually, there isn't an automated installer.
@@ -22,7 +22,7 @@ This tutorial is written for OxygenOS the OnePlus One device, so it shouldn't be
 
 
 First of all you need to have fastboot and adb installed (if you have android studio installed, you should already have this, otherwise you can install this pretty cool zip file here that should work.
-https://www.androidfilehost.com/?fid=95747613655041220
+[fastboot](https://www.androidfilehost.com/?fid=95747613655041220)
 
 
 Once you have fastboot and adb installed, you need to flash a recovery onto your device. I use TWRP, but you should be able to use any of the others that support the oneplus, such as ClockworkMod.

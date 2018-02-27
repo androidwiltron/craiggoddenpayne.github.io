@@ -10,7 +10,8 @@ image {
 
 .flexbox-container{
 	display: flex;
-	width: 100%;
+  width: 100%;
+  margin-bottom:1.5rem;
 }
 
 .sidebar {
@@ -87,7 +88,7 @@ image {
       </div>  
     </div>
     <div>
-      <a href="http://craig.goddenpayne.co.uk"><<< More posts like this</a>
+      <a class="morelikethis" href="http://craig.goddenpayne.co.uk">More posts like this</a>
     </div>
     <div class="entry">
       {{ content }}
@@ -96,8 +97,8 @@ image {
       <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
       <p>Please share and spread the word!</p>
       <div class='oss-widget-interface'></div> 
-      <a href="http://craig.goddenpayne.co.uk"><<< More posts like this</a>      
+      <a class="morelikethis" href="http://craig.goddenpayne.co.uk">More posts like this</a>      
     </div>
+    {% include disqus.html %}  
   </div>
-  {% include disqus.html %}
 </article>
