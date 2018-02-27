@@ -5,36 +5,27 @@ layout: default
 <style>
     
 .post-container {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
 }
-.flexbox-container{
-	display: flex;
-	width: 50%;
+.post-container  img {
+  max-width: 15rem;
+  width: 15rem;
+  max-height: 15rem;
+  height: 15rem;
+}
+.post-container > div{
+  flex-grow: 1;
 }
 
-.flexbox-container img {
-  max-width: 20rem;
-  width: 20rem;
-  max-height: 20rem;
-  height: 20rem;
-  flex-direction: row;
-  margin:0;
-}
-.image{
-	order: 1;
-	flex: 0;
-  width:100%;
-  max-width: 100%;
-  flex-basis: auto;
+.flexbox-container {
+  width:15rem;
 }
 
 a {
   color: #000;
 }
 
-.main{
-  width:100%;
-}
 .main p {
   font-size: medium;
   padding: 0!important;
@@ -47,18 +38,17 @@ a {
 
 </style>
 
+
+<div class="post-container">    
 {% for post in site.posts %}
-<div class="post-container">
   <div class="flexbox-container">
     <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
-      <div class="image">
-          <img src="{{ post.image }}"></img>
-      </div>
+      <img src="{{ post.image }}"></img>
       <div class="main">            
           <p>{{ post.title }}</p>                
           <p>{{ post.date | date: "%B %e, %Y" }}.</p>        
       </div>  
     </a>
   </div>
-</div>
 {% endfor %}
+</div>
