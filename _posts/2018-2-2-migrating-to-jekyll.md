@@ -14,12 +14,19 @@ Jekyll takes your content written in Markdown, passes it through your templates 
 But why use Jekyll over something dynamic such as wordpress?
 
 - Jekyll is very minimal, and this eliminates a lot of complexity
+
 - There is no database, which means its cheaper to run, and faster as pages are converted to static html, from markdown prior to publication.
+
 - All the content is written in markdown, and uses specified templates and if served in github, works like a CMS.
+
 - Jekyll is fast because it's just serving up static pages.
+
 - Jekyll starts off with a basic setup, so you won't be including features that you aren’t using.
+
 - You have complete control over the theme, and templating and its a very simple syntax, much more simple than creating a theme for say wordpress.
+
 - Security is better, because there is no real backend, just some static pages.
+
 - You can host in github, which is free, and you get the version control element for free!
 
 The documentation on the jekyll website is great, and I had no problems at all following them and getting up and running locally in a few minutes
