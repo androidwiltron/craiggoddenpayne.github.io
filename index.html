@@ -8,6 +8,7 @@ layout: default
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding:2rem;
 }
 .post-container  img {
   max-width: 100%;
@@ -39,6 +40,9 @@ a {
 .oss-widget-interface{
   padding-bottom: 0.5rem;
 }
+.post-title{
+  font-weight: bold;
+}
 
 </style>
 
@@ -49,8 +53,8 @@ a {
     <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
       <img src="{{ post.image }}"></img>
       <div class="main">            
-          <p>{{ post.title }}</p>                
-          <p>{{ post.date | date: "%B %e, %Y" }}.</p>        
+        <p>{{ post.date | date: "%B %e, %Y" }}.</p> 
+        <p class="post-title">{{ post.title }}</p>                
       </div>  
     </a>
   </div>
