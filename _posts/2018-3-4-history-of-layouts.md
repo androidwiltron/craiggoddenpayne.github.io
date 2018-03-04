@@ -1,6 +1,6 @@
 ---
 layout: post
-title: History of webpage layouts and design
+title: History of webpage layouts
 image: /assets/img/history-of-web-design/cover.PNG
 readtime: 15 minutes
 ---
