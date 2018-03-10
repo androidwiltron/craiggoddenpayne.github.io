@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Colourstrap/Colorstrap
+title: Jade server for node js
 image: /assets/img/2013-3-15-jade-server/jade.png
 readtime: 6 minutes
 ---
