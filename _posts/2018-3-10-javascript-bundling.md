@@ -48,7 +48,8 @@ The benefits of this are:
 
 - The order of loading can be easily inferred from the code
 - No namespaces are required on window 
-- Easy access to modules hosted in npm, 
+- Easy access to modules hosted in npm 
+- Easy access to other modules in your code
 
 
 ### The Present
@@ -108,13 +109,16 @@ You can find a great article here [The-cost-of-transpiling-es2015-in-2016](https
 
 There are various build tools out there for building/transpiling/minifying/bundling frontend code. A few of the more popular ones are gulp and grunt, although you can use npm directly or work with a tool that can do it all, such as webpack.
 
-What you will find is that the configuration for building frontend code seems very complicated, mostly because there are just so many different ways of doing it! Theres a lot of very similar functionality that is provided by different libraries and a lot of wheel reinventing to try and create the next best build process. I don't think there is a clear best way to do it, but I guess everyone will have a faviourite after trying different tech. From what I have read online anyway, ecma module loading using export and import seem to be the most favoured, most people use babel for transpilation of scripts and styles.
+What you will find is that the configuration for building frontend code seems very complicated, mostly because there are just so many different ways of doing it, and each way handles it differently! Theres a lot of very similar functionality that is provided by different libraries and a lot of wheel reinventing to try and create the next best build process. I don't think there is a clear best way to do it, but I guess everyone will have a faviourite after trying different tech. 
 
 
-### More about bundling modules
+### More about modules
 
-Modules are self-contained, and updating a module is easier if it is decoupled from other pieces of code. Modules can be reused, eliminating duplicate pieces of code thereby saving huge amount of time.
+Modules are self-contained, and updating a module is easier if it is decoupled from other pieces of code. Modules can be reused, eliminating duplicate pieces of code thereby saving huge amount of time. In order to use modules currently, we need to use a script loader. Script loading is used so that we can use modular JavaScript in applications today, until it becomes part of modern browsers.
 
-Commonjs bundles the modules and keywords require and exports. require is a function used to import functions from another module. exports is an object where any function put into it will get exported. It is designed for server development, outputs the code to run in a synchronous fashion, and are loaded one by one in order inside the file.
+There are a number of loaders for handling module loading, and when you are building for production, its recommended to use optimization tools (like the RequireJS optimizer) to concatenate scripts. 
 
-AMD was created as Commonjs isn't suited as well for the browsers. It does work in a similar way to commonjs, except it supports asynchronous module loading. Because of this, it makes for better startup times, and these modules can be objects, functions, constructors, strings, JSON, etc.
+
+### AMD
+
+The Asynchronous Module Definition (AMD) format is used to create a solution for loading javascript modules in the font end, that developers can use today, rather than waiting for browsers to support modules. The AMD module format allows the dependencies to asynchronously loaded. It removes the tight coupling between code and module identity. AMD uses the define method for facilitating module definition, and the require method for handling dependency loading. AMD was created as Commonjs isn't suited as well for the browsers. It makes for better startup times, compared to commonjs, and these modules can be of different types such as objects, functions, constructors, strings, JSON, etc.
