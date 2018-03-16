@@ -12,8 +12,14 @@
         "@type": "NewsArticle",
         "headline": "{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}",
         "datePublished": "{{page.date}}",
-        "author": "Craig Godden-Payne",
-        "publisher": "Craig Godden-Payne",
+        "author":{
+          "@type": "Person",
+          "name": "Craig Godden-Payne"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Craig Godden-Payne"
+        },
         "image": [
           "{{post.image}}"
         ]

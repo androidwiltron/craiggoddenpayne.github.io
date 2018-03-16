@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JS13k coding competition | Agent XIII
-image: /assets/img/2012-9-10-js13k-competition/agent13.jpg
+image: /assets/img/js13k-competition/agent13.jpg
 readtime: 8 minutes
 ---
 
@@ -16,7 +16,12 @@ I'm thinking of having some sort of strategy game. At the moment i'm just gettin
 
 Here is what I have done so far: Its coming in at about 7kb Zipped. I think i should be able to make the 13k limit, I just need to learn how to draw images using lines and rects, that should save me some kb, so far i have one 100x100px png image (weighing in at 2.6kb, if i add any more its going to eat up all my code space!!)
 
-![Ingame](/assets/img/2012-9-10-js13k-competition/ingame.png)
+<amp-img src="/assets/img/js13k-competition/ingame.png"
+  width="629"
+  height="474"
+  layout="responsive">
+</amp-img>
+
 
 I really like the space effect, its basically 520 random generated points on a 2d plane, I iterate through each point but also iterate a for(int i=0; i < 5; i++) then modulus the index of the point. I move each point 2 px to the left. This creates the illusion of layers of stars each layer moving at a different speed. Its pretty cool, i haven't done anything like it before!!
 
