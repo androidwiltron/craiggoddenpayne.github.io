@@ -10,7 +10,7 @@
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}",
+        "headline": "{{ page.title }}",
         "datePublished": "{{page.date}}",
         "author":{
           "@type": "Person",
