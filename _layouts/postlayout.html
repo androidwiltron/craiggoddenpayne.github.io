@@ -10,8 +10,8 @@
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
-        "headline": "Open-source framework for publishing content",
-        "datePublished": "2015-10-07T12:02:41Z",
+        "headline": "{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}",
+        "datePublished": "{{page.date}}",
         "image": [
           "logo.jpg"
         ]
