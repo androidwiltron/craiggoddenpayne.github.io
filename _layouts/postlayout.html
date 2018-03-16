@@ -12,8 +12,10 @@
         "@type": "NewsArticle",
         "headline": "{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}",
         "datePublished": "{{page.date}}",
+        "author": "Craig Godden-Payne",
+        "publisher": "Craig Godden-Payne",
         "image": [
-          "logo.jpg"
+          "{{post.image}}"
         ]
       }
     </script>

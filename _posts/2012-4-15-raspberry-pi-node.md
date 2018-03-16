@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Woo! RaspberryPi!
-image: /assets/img/2012-4-15-raspberry-pi-node/pi.jpg
+image: /assets/img/raspberry-pi-node/pi.jpg
 readtime: 3 minutes
 ---
 
