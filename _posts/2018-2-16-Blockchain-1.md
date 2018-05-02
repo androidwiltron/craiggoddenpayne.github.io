@@ -39,7 +39,7 @@ Bitcoin is a good example to explain this in more detail:
 
 <amp-img src="/assets/img/2018-2-16-blockchain/bitcoin.jpg"
   width="400"
-  height="200/">
+  height="200">
 </amp-img>
 
 
