@@ -11,7 +11,7 @@ I do a lot of terraform configuration at work, but never had a chance to look at
 
 ### What is a Virtual Private Cloud?
 
-A VPC is a logically isolate network within te AWS global network. It is the primary subnet, that can be split into multiple smaller subnets, and allows you to control all your network infrastructure.
+A VPC is a logically isolate network within the AWS global network. It is the primary subnet, that can be split into multiple smaller subnets, and allows you to control all your network infrastructure.
 
 It allows for enhanced security against everything that sits within it, and is typicaly secured using network control lists (NCLs). You can also use a VPC to internetwork with other organisations or accounts, using VPC peering, to join VPCs together. You can also assign public IP addresses from within the VPC (in AWS these are termed Elastic IP addresses), you can also seup hybrid clouds, using site-to-site VPN. VPC is free within AWS, as it is everything else inside, which you pay for.
 
