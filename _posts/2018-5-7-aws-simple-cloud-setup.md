@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up a simple cloud in AWS
-image: /assets/img/aws-simple-cloud-setup/cover.jpg
+image: /assets/img/aws-simple-cloud-setup/cover.png
 readtime: 13 minutes
 ---
 
@@ -71,21 +71,17 @@ In this example I am designing a simple cloud structure.
 
 First you need to create the VPC, and set the IP prefix to something like `192.168.0.0/16` and set the tenancy to default.
 
-You then want to create 3 subnets, and set the CIDR block to be 192.168.1.0/24, 192.168.2.0/24 and 192.168.3.0/24 respectively. 
+You then want to create 3 subnets, and set the CIDR block to be `192.168.1.0/24`, `192.168.2.0/24` and `192.168.3.0/24` respectively. 
 
-We are going to treat 1.0 as out DMZ containing our web servers and NATs, 2.0 as our DB server, and 3.0 as our Application servers.
+We are going to treat `1.0` as our DMZ containing our web servers and NATs, `2.0` as our DB server, and `3.0` as our Application servers.
 
 Next add an Internet Gateway and attach to the VPC
 
 Then add a new Route Table and attach to the VPC
 
-Next add a route to the route table, selecting the internet gateway, and assign it to everyone 0.0.0.0/0.
+Next add a route to the route table, selecting the internet gateway, and assign it to everyone `0.0.0.0/0`.
 
-Then add a subnet association, and select our DMZ subnet, 192.168.1.0/24
+Then add a subnet association, and select our DMZ subnet, `192.168.1.0/24`
 
-If you bring up an EC2 instance within the 192.168.1.0 subnet, and run a curl command, you should find that the box has internet traffic. 
+If you bring up an EC2 instance within the `192.168.1.0` subnet, and run a curl command, you should find that the box has internet traffic. 
 
-
-
-
-Next create two
