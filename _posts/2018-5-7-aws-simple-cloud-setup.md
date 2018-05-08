@@ -50,7 +50,7 @@ There are pros and cons for applying different security measures in AWS against 
 
 Security Groups feature:
 - Resource level traffic firewall, meaning you can block by resource such as Instance, ELB etc.
-- Ingress and Egress rules
+- Ingress and Egress rules combined
 - Is stateful (return traffic is allowed)
 
 Access Control Lists feature:
