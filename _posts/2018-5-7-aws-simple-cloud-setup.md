@@ -35,7 +35,7 @@ When setting up a subnet within a VPC, there a few quirks that are good to be aw
 
 - AWS reserves 5 IP addresses per subnet, which is typically the first 4 and the last 1. These are used for management purposes. Also a subnet can either be made Public, Private or VPN only
 
-- Subnets cannot span availability zones (as they site within a single AZ).
+- Subnets cannot span availability zones (as they sit within a single AZ).
 
 - VPCs span across a single region, but can span across multiple availability zones.
 
