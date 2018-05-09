@@ -22,8 +22,8 @@ The ELBK stack is made of many different components, but the main being:
 ### A typical setup
 
 <amp-img src="/assets/img/elbk-stack-setup/typical-setup.PNG"
-  width="747"
-  height="145"
+  width="969"
+  height="435"
   layout="responsive">
 </amp-img>
 
