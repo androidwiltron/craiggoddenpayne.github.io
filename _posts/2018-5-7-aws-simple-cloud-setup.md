@@ -75,6 +75,8 @@ Access Control Lists feature:
 
 In this example I am designing a simple cloud structure.
 
+It's going to have a DMZ subnet where the Web servers are located, and a subnet for dB servers, and one for application servers. The dB and application servers will talk to the Internet via a Nat Gateway. 
+
 First you need to create the VPC, and set the IP prefix to something like `192.168.0.0/16` and set the tenancy to default.
 
 <amp-img src="/assets/img/aws-simple-cloud-setup/create-vpc.png"
