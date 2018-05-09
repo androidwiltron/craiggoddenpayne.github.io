@@ -29,6 +29,12 @@ In the AWS console, there are various things you can setup, such as:
 - Security Groups
 - VPNs
 
+<amp-img src="/assets/img/aws-simple-cloud-setup/aws-icons.png"
+  width="747"
+  height="145"
+  layout="responsive">
+</amp-img>
+
 ### VPC Characteristics
 
 When setting up a subnet within a VPC, there a few quirks that are good to be aware of.
@@ -71,17 +77,46 @@ In this example I am designing a simple cloud structure.
 
 First you need to create the VPC, and set the IP prefix to something like `192.168.0.0/16` and set the tenancy to default.
 
+<amp-img src="/assets/img/aws-simple-cloud-setup/create-vpc.png"
+  width="526"
+  height="129"
+  layout="responsive">
+</amp-img>
+
 You then want to create 3 subnets, and set the CIDR block to be `192.168.1.0/24`, `192.168.2.0/24` and `192.168.3.0/24` respectively. 
+
+<amp-img src="/assets/img/aws-simple-cloud-setup/create-subnet.png"
+  width="607"
+  height="279"
+  layout="responsive">
+</amp-img>
 
 We are going to treat `1.0` as our DMZ containing our web servers and NATs, `2.0` as our DB server, and `3.0` as our Application servers.
 
 Next add an Internet Gateway and attach to the VPC
 
+<amp-img src="/assets/img/aws-simple-cloud-setup/internet-gateway.png"
+  width="655"
+  height="108"
+  layout="responsive">
+</amp-img>
+
 Then add a new Route Table and attach to the VPC
 
 Next add a route to the route table, selecting the internet gateway, and assign it to everyone `0.0.0.0/0`.
+
+<amp-img src="/assets/img/aws-simple-cloud-setup/route-table.png"
+  width="676"
+  height="272"
+  layout="responsive">
+</amp-img>
 
 Then add a subnet association, and select our DMZ subnet, `192.168.1.0/24`
 
 If you bring up an EC2 instance within the `192.168.1.0` subnet, and run a curl command, you should find that the box has internet traffic. 
 
+<amp-img src="/assets/img/aws-simple-cloud-setup/ec2.png"
+  width="817"
+  height="182"
+  layout="responsive">
+</amp-img>
