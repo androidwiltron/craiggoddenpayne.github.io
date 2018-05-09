@@ -21,7 +21,7 @@ The ELBK stack is made of many different components, but the main being:
 
 ### A typical setup
 
-<amp-img src="/assets/img/elbk-stack-setup/typical-setup.png"
+<amp-img src="/assets/img/elbk-stack-setup/typical-setup.PNG"
   width="747"
   height="145"
   layout="responsive">
@@ -50,10 +50,11 @@ log_format logstash  'HTTPREQUEST [$host] [$remote_addr $time_iso8601] [$request
 ```
 I've surrounded each of the directives with square brackets, which should make parsing the log easier in logstash, as it will signal the start and end of each piece of data.
 
-The above logg should output something like the below: 
+The above log should output something like the below: 
 
 ```
-Add example here
+HTTPREQUEST [127.0.0.1] [127.0.0.1 2018-05-09T09:32:49+00:00] [GET /path HTTP/1.1] [200 612] [0.000] [-] [curl/7.52.1] [-] [text/html] [-]
+HTTPREQUEST [127.0.0.1] [127.0.0.1 2018-05-09T09:33:08+00:00] [GET /path?query HTTP/1.1] [200 612] [0.000] [-] [curl/7.52.1] [-] [text/html] [-]
 ```
 
 
@@ -94,7 +95,100 @@ Once logstash is installed, you need to update the logstash config, to provide a
 A typical logstash configuration can be seen here 
 
 ```
-Example Here
+#config
+
+input {
+  beats {
+    port => 5044
+  }
+}
+
+filter {
+
+  if "beats_input_codec_plain_applied" in [tags] {
+      mutate {
+          remove_tag => ["beats_input_codec_plain_applied"]
+      }
+  }
+if ([message] =~ /HTTPREQUEST/) {
+    grok {
+
+match => { "message" => 'HTTPREQUEST \[%{DATA:url_host}] \[%{IPV4:clientip}] \[%{TIMESTAMP_ISO8601:requesttime}] '
+'\[%{WORD:verb} %{URIPATH:url_path}(?:%{URIPARAM:url_query})? HTTP/%{NUMBER:httpversion}] '
+'\[%{NUMBER:statuscode:int} %{NUMBER:bytessent:int}] \[%{NUMBER:duration}] \[%{DATA:referer}] '
+'\[%{DATA:useragent}] \[%{GREEDYDATA:cookies}] '
+'\[%{DATA:mimetype}] \[%{DATA:location}] ' }
+       add_field => {
+        "[url][host]" => "%{url_host}"
+        "[url][path]" => "%{url_path}"
+      }
+    }
+
+    if ([url_query]) {
+      mutate {
+        add_field => {
+          "[url][query]" => "%{url_query}"
+        }
+      }
+    }
+
+    urldecode {
+      field => "cookies"
+    }
+
+    kv {
+      field_split => ";"
+      value_split => "="
+      source => "cookies"
+      target => "[cookie]"      
+      trimkey => "\s"
+    }
+
+    urldecode { field => "url_query" }
+
+    kv {
+      field_split => "&"
+      source => "[url][query]"
+      trimkey => "?"      
+      target => "[query]"
+    }
+
+    useragent {
+      source => "[useragent]"
+      remove_field => ["[ua][minor]","[ua][major]","[ua][os_major]","[ua][os_minor]"]
+      target => "ua"
+    }
+
+    mutate {
+      add_field => {
+        "type" => "httprequest"
+        "document_type" => "httprequest"
+      }
+      add_tag => ["httprequest"]
+    }
+
+    geoip {
+      add_tag => [ "geoip" ]
+      database => "/usr/share/logstash/bin/GeoLite2-City_20170502/GeoLite2-City.mmdb"
+      source => "clientip"
+      target => "geoip"
+      add_field => [ "[geoip][coordinates]", "%{[geoip][longitude]}"]
+      add_field => [ "[geoip][coordinates]", "%{[geoip][latitude]}" ]
+    }
+
+    mutate {
+      convert => [ "[geoip][coordinates]", "float" ]
+    }
+  }        
+}
+
+output {
+  elasticsearch {
+    hosts => ["elasticsearch:9200"]
+  }
+}
+
+
 ```
 
 ### Elasticsearch
