@@ -7,7 +7,7 @@ readtime: 13 minutes
 
 ## Setting up a simple cloud
 
-I do a lot of terraform configuration at work, but never had a chance to look at how to provision stuff the correct way, and within the AWS management console, so I've working to understand the basics of AWS architecture, to improve my knowledge and skills.
+I do a lot of terraform configuration at work, but never had a chance to look at how to provision stuff within the AWS management console, so I've working to understand the basics of AWS architecture, to improve my knowledge and skills.
 
 ### What is a Virtual Private Cloud?
 
