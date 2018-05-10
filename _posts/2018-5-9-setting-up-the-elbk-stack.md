@@ -40,7 +40,7 @@ Lets have a look how this might be done:
 </amp-img>
 
 You can specify the format of the logging that you need, the Nginx documentation for this is really good.
-Here is a typical log format I've used in the past, it creates a log directive called logstash, which can be specified inside your location blocks
+Here is a typical log format I've used in the past, it creates a log directive called logstash, which can be specified inside your location block
 
 ```
 log_format logstash  'HTTPREQUEST [$host] [$remote_addr $time_iso8601] [$request] '
@@ -82,7 +82,7 @@ This can be done using logrotate, and a setup such as the below, will allow 30 d
 
 
 Setting up logstash is pretty straight forward, and can be done using a script similar to the below (if you want to automate it)
-Logstash depends on OpenJDK, Rub, Rake and Bundler.
+Logstash depends on OpenJDK, Ruby, Rake and Bundler.
 
 ```
 sudo apt-get install -y openjdk-8-jdk openjdk-8-jre jruby rake bundler
@@ -212,7 +212,7 @@ sudo apt-get update && sudo apt-get install elasticsearch
 Once it is installed, locate the elasticsearch.yml file, located at `/etc/elasticsearch/` update the file to:
 - `cluster.name` use this to give an identifier to your cluster
 - `network.host` to the ip address of the machine
-- add cors headers to the file, but adding the following:
+- add cors headers to the file, by adding the following:
 ```
 http.cors.enabled: true
 http.cors.allow-origin: "*"
@@ -248,7 +248,7 @@ Browse to the kibana IP address, on port 5601 and you are up and running!!
 
 Using this basic setup, your elastic search instance will create a seperate index each day, so it's worth knowing how to open and close indexes, so that the quantity of data does not become too large.
 
-Youo can do this by making a curl request to the elasticsearch instance
+You can do this by making a curl request to the elasticsearch instance
 
 ```
 To open an index:
