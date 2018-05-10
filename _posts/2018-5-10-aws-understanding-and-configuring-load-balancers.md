@@ -29,7 +29,7 @@ The performance for real time streaming is a thing within the application load b
 
 Application load balancers depend on "listeners". Listeners define the port and protocol, and you can have up to 10 listeners per load balancer. The routing rules are defined by the listener.
 
-Listeners talk to target groups, so you also have to to define a target group(s). Target groups can be made up of EC2 or Containers, but not both. Target groups are region wide rather tha AZ wide, and can be associated with auto scaling groups if needed.
+Listeners talk to target groups, so you also have to to define a target group(s). Target groups can be made up of EC2 or Containers, but not both. Target groups are region wide rather than availability zone wide, and can be associated with auto scaling groups if needed.
 
 <amp-img src="/assets/img/load-balancers/example.png"
   width="596"
