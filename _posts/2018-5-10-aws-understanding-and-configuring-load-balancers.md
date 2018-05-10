@@ -25,7 +25,7 @@ For security and analysis purposes you can also integrate with cloud trail, and 
 
 It works on layer 7 traffic only, but does this better than the classic load balancer, as you can route not just on path, but also content. It also has support for containers as well as just EC2, and it integrates really well with ECS.
 
-The performance for real team streaming is a thing within the application load balancer, as it is more performant than the classic load balancer. It also has a lower hourly rate because you can route based on path and port, meaning you can provision less load balancers.
+The performance for real time streaming is a thing within the application load balancer, as it is more performant than the classic load balancer. It also has a lower hourly rate because you can route based on path and port, meaning you can provision less load balancers.
 
 Application load balancers depend on "listeners". Listeners define the port and protocol, and you can have up to 10 listeners per load balancer. The routing rules are defined by the listener.
 
