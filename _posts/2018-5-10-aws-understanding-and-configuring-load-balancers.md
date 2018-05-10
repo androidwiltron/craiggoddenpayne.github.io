@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding and configuring Load Balancers
+title: Load Balancers in AWS
 image: /assets/img/load-balancers/cover.png
 readtime: 11 minutes
 ---
