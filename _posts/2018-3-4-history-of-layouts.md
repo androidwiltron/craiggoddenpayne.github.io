@@ -10,8 +10,8 @@ readtime: 15 minutes
 Back in August 1991, the first website was a simple text-based page with a few links. The first ever webpage served only to tell people what the World Wide Web was all about. Web pages that followed after this were very similar, and were entirely text based, with links to other pages and always featured single column designs. A basic version of html was born, but was not very widely used. 
 
 <amp-img src="/assets/img/history-of-web-design/firstpage.png"
-  width="328"
-  height="149"
+  width="550"
+  height="418"
   layout="responsive">
 </amp-img>
 
@@ -63,8 +63,8 @@ In the early 2000s, css designs started gaining popularity. While css had been a
 Using css reduced markup clutter, and made for cleaner code in web layouts. Css also makes it easier to maintain sites because the content and design elements are separated. You can change the entire look of a css-based site without ever having to touch the content. Document sizes of CSS designs are generally smaller than the alternatives, which translated to an improvement in page response times. This is also helped by the fact that css is cached by the user’s browser so that subsequent page views would be faster-loading.
 
 <amp-img src="/assets/img/history-of-web-design/earlycss.jpg"
-  width="328"
-  height="149"
+  width="550"
+  height="450"
   layout="responsive">
 </amp-img>
 
@@ -92,7 +92,7 @@ Although not much has changed in the last few years, new units exist, like vh, v
 One other thing to mention is the introduction of web components. Web components are a set of elements bundled together, and introduce an easier workflow, where elements become building blocks that can be reused and updated separately. A good example of this, is react. Web components usually have custom elements, work with a shadow dom, use html templates, rather than combining design and functionality, and imports which allow components to be easily seperated
 
 <amp-img src="/assets/img/history-of-web-design/react.png"
-  width="328"
-  height="149"
+  width="684"
+  height="442"
   layout="responsive">
 </amp-img>
