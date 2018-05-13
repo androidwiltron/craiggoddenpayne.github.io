@@ -7,18 +7,6 @@
   margin: 0;
   padding: 0;
 }
-
-@media only screen and (min-width: 600px) {
-    [alt='CoverImage'] {
-        width:300px;
-        height: 300px;
-        margin: auto;
-    }
-    .post h1 {
-        text-align: center;
-    }
-}
-
 * {
     font-family: 'Ubuntu', sans-serif;
     font-size: medium;
@@ -30,28 +18,57 @@
 #main {
     padding: 1rem;
 }
- table {
-    margin: 0.5rem;
+a {
+    color: #000;
 }
-td {
-    padding: 0.3rem;
-    border-bottom-style: solid;
-    border-bottom-color: lightgrey;
-    ;
-    border-bottom-width: 1px;
-    font-size: small;
+p {
+    font-size: medium;
+    padding: 0.5em;
+    line-height: 2rem;
+}
+li p {
+    padding: 0;
+    line-height: 1.3rem;
+}
+ li {
+    font-size: medium;
+    padding: 0;
+    line-height: 1.3rem;
+    color: #333;
+    list-style-type: circle;
+    list-style-position: initial;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+h1 {
+    font-size: xx-large;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+h2 {
+    font-size: x-large;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+h3 {
+    font-size: large;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .morelikethis {
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    color: #ffffff;
-    background: grey;
-    padding: 10px 20px 10px 20px;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	padding: .8em 1.4em;
+	padding-right: 4.7em;
+	background: #139675;
+	border: none;
+	color: white;
+	transition: .2s;
+    min-width: 15em;
 }
-.morelikethis:hover {
-    background: #3cb0fd;
-}
+
  .code-toolbar {
     word-wrap: break-word;
     white-space: normal;
@@ -67,54 +84,38 @@ td {
     width: 100%;
     margin: 0;
 }
- .container {
+
+.container {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
 }
- img {
+img {
     max-width: 100%;
     padding: 0.5rem;
 }
- a {
+a {
     color: #000;
 }
- p {
-    font-size: medium;
-    padding: 0.5em;
-    line-height: 2rem;
+image {
+    max-width: 100%;
+    max-height: 100%;
 }
- li p {
-    padding: 0;
-    line-height: 1.3rem;
+
+
+@media only screen and (min-width: 600px) {
+    [alt='CoverImage'] {
+        width:300px;
+        height: 300px;
+        margin: auto;
+    }
+    .post h1 {
+        text-align: center;
+    }
 }
- li {
-    font-size: medium;
-    padding: 0;
-    line-height: 1.3rem;
-    color: #333;
-    list-style-type: circle;
-    list-style-position: initial;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
- h1 {
-    font-size: xx-large;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
- h2 {
-    font-size: x-large;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
- h3 {
-    font-size: large;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
+
+
  .wrapper-footer {
     margin-top: 0;
 }
@@ -122,13 +123,15 @@ td {
     display: block;
     margin-bottom: 1.5rem;
 }
- .img-center {
+.img-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
 }
- .footer {
+
+
+.footer {
     text-align: center;
     height: 10rem;
 }
@@ -156,23 +159,14 @@ td {
     flex-direction: row;
     justify-content: center;
 }
-a {
-    color: #000;
-}
+
 .main p {
     font-size: medium;
     padding: 0;
     line-height: 1.2rem;
 }
-.oss-widget-interface {
-    padding-bottom: 0.5rem;
-}
 .post-title {
     font-weight: bold;
-}
-image {
-    max-width: 100%;
-    max-height: 100%;
 }
 .article-flexbox-container * {
   margin:0;
@@ -196,15 +190,15 @@ image {
 }
 @media (max-width: 480px) {
     .container {
-    display: flex;
-    width: 100%;
-}
-.box2 {
-    order: 2;
-}
-.box1 {
-    order: 1;
-}
+        display: flex;
+        width: 100%;
+    }
+    .box2 {
+        order: 2;
+    }
+    .box1 {
+        order: 1;
+    }
 }
  .post {
     margin-top: 1rem;
@@ -227,12 +221,6 @@ image {
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-bottom-color: #eee;
-}
- .oss-widget-interface {
-    padding-bottom: 0.5rem;
-}
- h1 {
-    font-size: xx-large;
 }
  pre {
     background-color: #EEE;
