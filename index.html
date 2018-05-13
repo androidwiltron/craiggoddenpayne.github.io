@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<div class="post-container">    
+<div class="post-container container">    
 {% for post in site.posts %}
   <div class="flexbox-container">
     <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
       <img src="{{ post.image }}"></img>
       <div class="main">            
         <p>{{ post.title }}</p>                
-        <p>{{ post.date | date: "%B %e, %Y" }}.</p> 
+        <!-- <p>{{ post.date | date: "%B %e, %Y" }}.</p>  -->
       </div>  
     </a>
   </div>
