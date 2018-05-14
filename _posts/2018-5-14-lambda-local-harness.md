@@ -25,7 +25,7 @@ class Program
             Ioc.IocSetup();
             var function = new Function(Ioc.Resolve<IApplicationValidator>(), new TelemetryClient());
 
-            using (var host = new LambdaHost(function, nameof(Function.FullApplication), new Dictionary<string, string> {{"AppInsightsInstrumentationKey", "NOT SET"}, {"Environment", "dev"}}))
+            using (var host = new LambdaHost(function, nameof(Function.FullApplication), new Dictionary<string, string>()))
             {
                 host.Wait();
             }
