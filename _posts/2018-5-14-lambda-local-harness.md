@@ -20,14 +20,16 @@ In your console application you will want to new up the LambdaHost and Wait, sim
 ```
 class Program
 {
-  static void Main(string[] args)
-  {    
-    var function = new Function(Ioc.Resolve<IApplicationValidator>(), new TelemetryClient());
-    using (var host = new LambdaHost(function, "FullApplication", new Dictionary<string, string> {{"AppInsightsInstrumentationKey", "NOT SET"}}))
-    {
-      host.Wait();
-    }
-  }
+        static void Main(string[] args)
+        {
+            Ioc.IocSetup();
+            var function = new Function(Ioc.Resolve<IApplicationValidator>(), new TelemetryClient());
+
+            using (var host = new LambdaHost(function, nameof(Function.FullApplication), new Dictionary<string, string> {{"AppInsightsInstrumentationKey", "NOT SET"}, {"Environment", "dev"}}))
+            {
+                host.Wait();
+            }
+      }
 }
 ```
 
