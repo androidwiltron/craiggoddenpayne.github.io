@@ -33,6 +33,12 @@ class Program
 }
 ```
 
+<amp-img src="/assets/img/local-lambda-harness/console.PNG"
+  width="642"
+  height="183"
+  layout="responsive">
+</amp-img>
+
 Once setup and run, you can send requests to the lambda, and test your lambda, debugging support etc.
 
 If you want more information, checkout the github repo:
