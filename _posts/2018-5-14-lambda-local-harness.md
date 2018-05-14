@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Library for testing an AWS locally with C#
-image: assets/img/local-lambda-harness/cover.PNG
+image: /assets/img/local-lambda-harness/cover.PNG
 readtime: 4 minutes
 ---
 
