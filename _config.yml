@@ -8,7 +8,7 @@ name: Craig Godden-Payne
 description: Software Engineer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://craig.goddenpayne.co.uk/assets/avatar.jpg
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -28,7 +28,7 @@ footer-links:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://craig.goddenpayne.co.uk
+url: https://craig.goddenpayne.co.uk
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
