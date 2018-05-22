@@ -79,4 +79,34 @@ There are four main types of identity and access management, and use an RBAC typ
 #### Policies
 - Policies are a collection of permissions that can be applied to users, groups or policies.
 
-### IAM examples
+### Setting up policies
+
+The policy language you use when creating permissions using IAMs has two elements. Specification (defining access policies) and Enforcement (evaluating policies). Policys are written in JSON, and each statement should contain "PARC"
+- Principle
+- Action
+- Resource
+- Condition
+
+### Principal
+
+A principal is an entity which is allowed or denied access to a resource. This can be indicated in different ways e.g.
+```
+- Anonymous Users
+"Principal":"AWS":"*.*"  
+
+- Specific Accounts
+"Principal":{"AWS":"arn:aws:iam::123456789012:root"} 
+
+- Individual IAM User
+"Principal":{"AWS":"arn:aws:iam::123456789012:user/name"}
+
+- Federated User
+"Principal":{"Federated":"www.amazon.com"}
+
+- Specific Role
+"Principal":{"AWS":"arn:aws:iam::123456789012:role/rolename"}
+
+- Specific Service
+"Principal":{"Service":"ec2.amazonaws.com"}
+```
+
