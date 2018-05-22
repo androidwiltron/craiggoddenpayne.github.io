@@ -2,7 +2,7 @@
 layout: post
 title: AWS security basics
 image: /assets/img/aws-security-basics/cover.PNG
-readtime: 8 minutes
+readtime: 15 minutes
 ---
 
 ### Physical Security
