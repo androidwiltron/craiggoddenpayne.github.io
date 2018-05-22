@@ -2,10 +2,13 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
+	  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="canonical" href="https://craig.goddenpayne.co.uk{{ page.url }}" />
+  <meta property="og:image" content="{{site.baseurl}}{{post.image}}">
+	  
+	  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<meta name="google-site-verification" content="0eyaY63Jrwx2zs4YWd8S-IGc8XkSP7Mzq6c9Emcu7Oc" />
     <script type="application/ld+json">
       {
@@ -20,10 +23,10 @@
         "publisher": {
           "@type": "Organization",
           "name": "Craig Godden-Payne",
-          "logo": "http://craig.goddenpayne.co.uk/assets/avatar.jpg"
+          "logo": "https://craig.goddenpayne.co.uk/assets/avatar.jpg"
         },
         "image": [
-          "http://craig.goddenpayne.co.uk/{{page.image}}"
+          "https://craig.goddenpayne.co.uk/{{page.image}}"
         ]
       }
     </script>

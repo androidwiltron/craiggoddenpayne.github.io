@@ -20,18 +20,27 @@ In your console application you will want to new up the LambdaHost and Wait, sim
 ```
 class Program
 {
-  static void Main(string[] args)
-  {    
-    var function = new Function(Ioc.Resolve<IApplicationValidator>(), new TelemetryClient());
-    using (var host = new LambdaHost(function, "FullApplication", new Dictionary<string, string> {{"AppInsightsInstrumentationKey", "NOT SET"}}))
-    {
-      host.Wait();
-    }
-  }
+        static void Main(string[] args)
+        {
+            Ioc.IocSetup();
+            var function = new Function(Ioc.Resolve<IApplicationValidator>(), new TelemetryClient());
+
+            using (var host = new LambdaHost(function, nameof(Function.FullApplication), new Dictionary<string, string>()))
+            {
+                host.Wait();
+            }
+      }
 }
 ```
+
 
 Once setup and run, you can send requests to the lambda, and test your lambda, debugging support etc.
 
 If you want more information, checkout the github repo:
 [https://github.com/craiggoddenpayne/lambda-local-harness](https://github.com/craiggoddenpayne/lambda-local-harness)
+
+<amp-img src="/assets/img/local-lambda-harness/console.PNG"
+  width="642"
+  height="183"
+  layout="responsive">
+</amp-img>
