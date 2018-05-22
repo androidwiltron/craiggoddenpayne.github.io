@@ -101,7 +101,7 @@ There are four main types of identity and access management, and use an RBAC typ
 
 #### Roles
 
-- You apply a role to an User or an Instance. Roles are meant to be "assumed" rather than granted like you would in a group (i.e. its a temporary infation of privaledges).
+- You apply a role to an User or an Instance. Roles are meant to be "assumed" rather than granted like you would in a group (i.e. its a temporary inflation of privileges).
 
 #### Policies
 
