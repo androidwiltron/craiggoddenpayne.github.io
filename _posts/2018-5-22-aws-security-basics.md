@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AWS security basics
+title: AWS security and IAM Policies
 image: /assets/img/aws-security-basics/cover.PNG
 readtime: 15 minutes
 ---
