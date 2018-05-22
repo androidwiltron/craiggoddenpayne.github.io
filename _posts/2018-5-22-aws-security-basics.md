@@ -58,7 +58,7 @@ Here is a more in depth comparison.
 - Operates at the instance level (first layer of defense)
 - Supports allow rules only
 - Is stateful: Return traffic is automatically allowed, regardless of any rules
-- We evaluate all rules before deciding whether to allow traffic
+- They valuate all rules before deciding whether to allow traffic
 - Applies to an instance only if someone specifies the security group when launching the instance, or associates the security group with the instance later on
 
 #### Network ACLs
@@ -66,7 +66,7 @@ Here is a more in depth comparison.
 - Operates at the subnet level (second layer of defense)
 - Supports allow rules and deny rules
 - Is stateless: Return traffic must be explicitly allowed by rules
-- We process rules in number order when deciding whether to allow traffic
+- They process rules in number order when deciding whether to allow traffic
 - Automatically applies to all instances in the subnets it's associated with (backup layer of defense, so you don't have to rely on someone specifying the security group)
 
 
