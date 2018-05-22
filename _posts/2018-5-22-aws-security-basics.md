@@ -39,6 +39,13 @@ AWS works on a basis of shared security responsibility, which means that in orde
 
 There are many products available from AWS which aim to make the platform more secure, and are relatively simple to use. 
 
+<amp-img src="/assets/img/aws-security-basics/security.jpg"
+  width="458"
+  height="275"
+  layout="responsive">
+</amp-img>
+
+
 ### Virtual private cloud level
 
 You can use security groups and network control lists. A security group works as a virtual firewall to control inbound and outbound traffic. They work at the instance level, rather than the subnet level and a network control list acts as a firewall for controlling traffic in and out of one or more subnets.
@@ -78,6 +85,11 @@ IAM allows you to manage access to AWS services and resources securely. You can 
 
 There are four main types of identity and access management, and use an RBAC type model.
 
+<amp-img src="/assets/img/aws-security-basics/iam.png"
+  width="384"
+  height="358"
+  layout="responsive">
+</amp-img>
 
 #### Users
 
@@ -238,7 +250,14 @@ There are some gotchas with policies.
 - [https://aws.amazon.com/documentation/iam/](https://aws.amazon.com/documentation/iam/)
 
 
+
 ### Some Examples
+
+<amp-img src="/assets/img/aws-security-basics/example.png"
+  width="400"
+  height="140"
+  layout="responsive">
+</amp-img>
 
 Here is an example of allowing permission for a user to stop, start and terminate any EC2 instance within the account.
 
