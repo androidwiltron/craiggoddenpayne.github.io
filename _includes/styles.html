@@ -13,12 +13,17 @@
     font-size: medium;
     box-sizing: border-box;
 }
+body{
+    background-image: url("https://craig.goddenpayne.co.uk/assets/img/background.png");
+}
 #main, article {
     width: 100%;
+    padding: 2px;
 }
 #main {
-    background-image: url("https://craig.goddenpayn.co.uk/assets/img/background.png");
     padding: 1rem;
+    padding-top:0;
+    padding-bottom:0;
 }
 a {
     color: #000;
@@ -58,6 +63,11 @@ h3 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+h4 {
+    font-size: medium;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 .morelikethis {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
@@ -88,10 +98,13 @@ h3 {
 }
 
 .container {
+    background-color: #ffffff;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 img {
     max-width: 100%;
@@ -193,6 +206,10 @@ image {
     order: 1;
     flex: 5;
     padding-top: 0.5rem;
+}
+.author h4{
+    padding: 0;
+    font-weight: normal;
 }
 @media (max-width: 480px) {
     .container {
