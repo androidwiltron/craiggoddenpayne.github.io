@@ -1,16 +1,49 @@
 ---
 layout: default
 ---
-<div class="post-container container">    
+<style>
+.article-highlight {
+  width:100%;
+  display: flex;
+  justify-content:left;
+  flex-wrap: wrap;
+}
+.article-hightlight-cover{
+  flex-grow:2;
+  flex: 30%;
+}
+.article-highlight-info{
+  flex-grow:8;
+  flex: 70%;
+}
+
+.article-highlight-cover img {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+</style>
+
+<div class="container">
 {% for post in site.posts %}
-  <div class="flexbox-container">
-    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
-      <img src="{{ post.image }}"></img>
-      <div class="main">            
-        <p class="short-intro">{{ post.title }}</p>                
-        <!-- <p>{{ post.date | date: "%B %e, %Y" }}.</p>  -->
-      </div>  
-    </a>
-  </div>
+
+
+<div class="article-highlight">
+    <div class="article-highlight-cover">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
+            <img src="{{ post.image }}"></img>
+          </a>
+        </div>
+    <div class="article-highlight-info">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
+
+        <h4>{{ post.title }}</h4>         
+        <p class="post-date">{{ post.date | date: "%B %e, %Y" }}.</p>
+        <p class="short-intro">{{ post.content | strip_html | truncatewords: 30 }}</p>               
+      </a>
+
+    </div>
+  
+ <div>
 {% endfor %}
-</div>
+  
+  </div>

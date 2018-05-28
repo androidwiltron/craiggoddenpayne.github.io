@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blockchain
+title: Understanding Blockchain and it's history
 image: /assets/img/2018-2-16-blockchain/blockchain.jpg
 tags: blockchain dlt
 readtime: 5 minutes

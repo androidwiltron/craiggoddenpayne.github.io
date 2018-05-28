@@ -5,8 +5,6 @@ image: /assets/img/load-balancers/cover.png
 readtime: 11 minutes
 ---
 
-## Load balancers in AWS
-
 There are two PAAS load balancer offerings within AWS. The classic load balancer and the application load balancer.
 
 In the past, the classic load balancer was called the elastic load balancer, but now the term elastic load balancer refers to the offerings for AWS load balancers.

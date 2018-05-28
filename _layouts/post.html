@@ -1,41 +1,34 @@
 ---
 layout: postlayout
 ---
-<div class="container">      
 <article>
-  <div class="post">
-    <h1>{{ page.title }}</h1>	
-    <amp-img class="cover-image" src="{{page.image}}" alt="CoverImage" height="100" width="100" layout="responsive"></amp-img>    
-	<meta name="description" content="{{page.title}}"/>
-    <div class="article-flexbox-container">
-      <div class="image">
-          <amp-img src="/assets/avatar.jpg" alt="Avatar" height="64" width="64"></amp-img>
-      </div>
-      <div class="author">
-          <h4>Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a></h4>
-          <h4>On {{ page.date | date: "%B %e, %Y" }}</h4>         
-          <h4 class="reading-time">
-            {% if page.readtime == null %}
-              I hope you enjoy this post!
-            {% else %} 
-              Reading this will take about {{page.readtime}}.
-            {% endif %}
-          </h4>
-        </div><br/> 
-      </div>  
-    </div>
-    <div>
-      <a class="morelikethis" href="http://craig.goddenpayne.co.uk">More posts like this</a>
-    </div>
-    <div class="entry">
-      {{ content }}
-    </div>          
-    <div class="date">
-      <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
-      <p>Please share and spread the word!</p>
-      <div class='oss-widget-interface'></div> 
-      <a class="morelikethis" href="http://craig.goddenpayne.co.uk">More posts like this</a>      
-    </div>
-  </div>
-</article>
-</div>
+        <amp-img class="article-image" src="{{ page.image }}" alt="CoverImage" height="100" width="100" layout="responsive"></amp-img>    
+        <div class="blog-article-image-gradient hidden-bigger-than-mobile"></div>
+        <a class="back-button" href="http://craig.goddenpayne.co.uk"><</a>	
+        <div class="container">
+            <div class="blog-article-header">
+            <div class="clearfix">
+              <h1 class="article-header">{{ page.title }}</h1>
+           </div>
+           <amp-img src="/assets/avatar.jpg" alt="Avatar" height="64" width="64"></amp-img>
+           <div class="author">
+              <p>Written by <a href="mailto:craig@goddenpayne.co.uk">Craig Godden-Payne</a></p>
+              <p>On {{ page.date | date: "%B %e, %Y" }}</p>
+              <p class="reading-time">
+                 {% if page.readtime == null %}
+                 I hope you enjoy this post!
+                 {% else %} 
+                 Reading this will take about {{page.readtime}}.
+                 {% endif %}
+              </p>
+           </div>
+           </div>
+           {{ content }}
+           <div class="date">
+              <p>Written on {{ page.date | date: "%B %e, %Y" }}.</p>
+              <p>Please share and spread the word!</p>
+              <div class='oss-widget-interface'></div>
+              <a class="morelikethis" href="http://craig.goddenpayne.co.uk">More posts like this</a>      
+           </div>
+        </div>
+     </article>

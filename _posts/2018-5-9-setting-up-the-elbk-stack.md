@@ -5,8 +5,6 @@ image: /assets/img/elbk-stack-setup/cover.png
 readtime: 8 minutes
 ---
 
-### Update
-
 It's worth noting, this post refers to ELBK stach version 5, the latest can be found here: [https://www.elastic.co/](https://www.elastic.co/). Also there are PAAS offerings, which means you can have a cloud provider provision a lot of the infrastructure on your behalf, without maintainance. 
 
 ## What is the ELBK stack?
