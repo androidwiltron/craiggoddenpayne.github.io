@@ -117,9 +117,13 @@ For example:
 </amp-img>
 
 
-Theres also another tool which is pretty cool, called blast radius, which is available via a docker image (although this is less safe, since it runs the terraform command for you, there must be a way to generate the dot file and upload)
+Theres also another tool which is pretty cool, called blast radius, which is available via a docker image (although this is less safe, since it runs the terraform command for you with your credentials, there must be a way to generate the dot file and upload, but I can't seem to find the documentation for this)
 
 [https://28mm.github.io/blast-radius-docs/](https://28mm.github.io/blast-radius-docs/)
+
+```
+docker run --cap-add=SYS_ADMIN -it --rm -p 5000:5000 -v C:\Users\craig.godden-payne\Desktop\terra:/workdir:ro 28mm/blast-radius
+```
 
 <amp-img src="/assets/img/terraform-graph/blast-radius.svg"
   width="1000"
