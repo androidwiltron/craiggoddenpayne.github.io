@@ -5,8 +5,9 @@ layout: default
 .article-highlight {
   width:100%;
   display: flex;
-  justify-content:left;
+  justify-content:center;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
 }
 .article-hightlight-cover{
   flex-grow:2;
@@ -24,26 +25,20 @@ layout: default
 </style>
 
 <div class="container">
-{% for post in site.posts %}
-
-
-<div class="article-highlight">
+  {% for post in site.posts %}
+  <div class="article-highlight">
     <div class="article-highlight-cover">
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
-            <img src="{{ post.image }}"></img>
-          </a>
-        </div>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
+        <img src="{{ post.image }}"></img>
+      </a>
+    </div>
     <div class="article-highlight-info">
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
-
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
         <h4>{{ post.title }}</h4>         
         <p class="post-date">{{ post.date | date: "%B %e, %Y" }}.</p>
         <p class="short-intro">{{ post.content | strip_html | truncatewords: 30 }}</p>               
       </a>
-
-    </div>
-  
- <div>
-{% endfor %}
-  
+    </div>  
   </div>
+ {% endfor %}
+</div>
