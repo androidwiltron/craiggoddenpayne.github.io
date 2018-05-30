@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Terraform dependency graphing visualisations
-image: /assets/img/terraform-graph/cover.jpg
+image: /assets/img/terraform-graph/cover.png
 readtime: 4 minutes
 ---
 
