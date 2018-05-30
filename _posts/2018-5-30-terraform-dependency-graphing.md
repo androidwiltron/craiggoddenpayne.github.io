@@ -115,3 +115,14 @@ For example:
   height="400"
   layout="responsive">
 </amp-img>
+
+
+Theres also another tool which is pretty cool, called blast radius, which is available via a docker image (although this is less safe, since it runs the terraform command for you, there must be a way to generate the dot file and upload)
+
+[https://28mm.github.io/blast-radius-docs/](https://28mm.github.io/blast-radius-docs/)
+
+<amp-img src="/assets/img/terraform-graph/blast-radius.svg"
+  width="1000"
+  height="400"
+  layout="responsive">
+</amp-img>
