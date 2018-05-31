@@ -69,11 +69,13 @@ Contrary to popular belief unit testing does not mean writing twice as much code
 
 Good unit tests can help document and define what something is supposed to do
 
-<amp-img src="/assets/img/TDD/tdd-run.png"
+
+<amp-img src="/assets/img/TDD/test-run.png"
   width="614"
   height="197"
   layout="responsive">
 </amp-img>
+
 
 ## How do acceptance tests differ?
 
