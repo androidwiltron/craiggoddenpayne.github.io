@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding Blockchain and it's history
+title: Blockchain and cryptoeconomics
 image: /assets/img/blockchain/blockchain.jpg
 tags: blockchain dlt ethereum bitcoin hyperledger permissioned permissionless distributed ledger standards regulations crypto
 readtime: 22 minutes
