@@ -29,8 +29,7 @@ A blockchain is a type of distributed ledge technology, which basically means it
 
 <amp-img class="center" src="/assets/img/blockchain/p2p.jpg"
   width="264"
-  height="195"
-  layout="responsive">
+  height="195">
 </amp-img>
 
 A blockchain will track various assets transactions. The transactions are are grouped into blocks. There be any number of these transactions in a block. Nodes on the blockchain network group up the transactions and send them through the network. They are synced up by an agreement by all peers, and eventually each node will contain an up to date version of the ledger. Blockchain just basically a P2P distributed ledger, which is ruled by smart contracts. Smart contracts are just predefined actions that are performed when certain conditions are met.
@@ -147,8 +146,7 @@ Bitcoin mining is one example of a consensus algorithm, although there are other
 
 <amp-img src="/assets/img/blockchain/proof-of-work.png"
   width="407"
-  height="423"
-  layout="responsive">
+  height="423">
 </amp-img>
 
 PoW is used within bitcoin, and is usually referred to as mining. In order to add a new block onto the block chain, a computational challenge must be solved.
@@ -165,8 +163,7 @@ Mining is concentrated in countries where energy is cheap.
 
 <amp-img src="/assets/img/blockchain/proof-of-stake.png"
   width="240"
-  height="174"
-  layout="responsive">
+  height="174">
 </amp-img>
 
 In PoS, nodes are known as validators, rather than miners. When a node validates, it earns a small transaction fee.
@@ -193,8 +190,7 @@ The winner creates the next block on the chain.
 
 <amp-img src="/assets/img/blockchain/proof-of-authority.png"
   width="293"
-  height="191"
-  layout="responsive">
+  height="191">
 </amp-img>
 
 PoA uses a set of authorities, which are designated nodes, who are allowed to create blocks on the chain.
