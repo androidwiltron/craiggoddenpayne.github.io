@@ -2,8 +2,8 @@
 layout: post
 title: Understanding Blockchain and it's history
 image: /assets/img/blockchain/blockchain.jpg
-tags: blockchain dlt
-readtime: 5 minutes
+tags: blockchain dlt ethereum bitcoin hyperledger permissioned permissionless distributed ledger standards regulations crypto
+readtime: 22 minutes
 ---
 
 Blockchains have recently gained popularity in several industries, and although I am yet to use them in my day to day, it's something I can definitely see coming in the near term.
@@ -201,7 +201,7 @@ Ledgers using PoA require sign off by the majority of the authority nodes in ord
 
 #### Comparison
 
-||Speed|Scalability|Finality|
+|Type|Speed|Scalability|Finality|
 |------|-|-|-|
 |Lottery|Good|Good|Moderate|
 |Voting|Good|Moderate|Good|
@@ -223,8 +223,17 @@ In 2016 the International Organisation of Standardisation for Blockchain and Dis
 
 #### Regulations 
 
+Lack of regulation creates uncertainty for everyone involved. Highly regulated sectors, such as finance are treading very carefully with distributed ledger technologies, as there are no regulatory guidelines at this time for smart contracts.
+
+This is most likely one of the major reasons that is preventing the rapid adoption of DLTs.
+
+#### Lack of know how
+
+Blockchain is general is gaining more traction, and people are becoming more interested in it, but there is still a lack of technical talent of people in blockchain
+
 <amp-img src="/assets/img/blockchain/crypto.png"
   width="664"
   height="434"
   layout="responsive">
 </amp-img>
+
