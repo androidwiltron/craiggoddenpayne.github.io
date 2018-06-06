@@ -129,7 +129,7 @@ This is prevented by having good behaviour incentivised so that:
 
 ### Consensus Algorithms
 
-<amp-img src="/assets/img/blockchain/consensus.jpg"
+<amp-img src="/assets/img/blockchain/consensus.JPG"
   width="511"
   height="355"
   layout="responsive">
