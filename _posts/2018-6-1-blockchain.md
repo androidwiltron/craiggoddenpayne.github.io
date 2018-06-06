@@ -6,8 +6,9 @@ tags: blockchain dlt ethereum bitcoin hyperledger permissioned permissionless di
 readtime: 22 minutes
 ---
 
-Blockchains have recently gained popularity in several industries, and although I am yet to use them in my day to day, it's something I can definitely see coming in the near term.
+Blockchains have recently gained popularity in several industries, and although I am yet to use them in my day to day, it's something I would like to in the short term. This post is really just some research I have made though training, and reading about various permissioned and permissionless blockchains.
 
+### Intro
 
 Blockchains can solve problems and create efficiencies in tech areas such as privacy, security and data sharing. Blockchains help to move away from the centralized "one source of truth" monolith database, that most companies have. In fact in almost every job I have had, there is always a huge, single production database, that contains all the business critical data, and if it were to go down, there would be chaos.
 
