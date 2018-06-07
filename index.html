@@ -2,6 +2,11 @@
 layout: default
 ---
 <style>
+.snippet-articles {
+    display:flex;
+    flex-wrap: wrap;
+}
+
 .article-highlight {
   width:100%;
   display: flex;
@@ -9,6 +14,17 @@ layout: default
   flex-wrap: wrap;
   padding-bottom: 2rem;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .article-highlight {
+    width:50%;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+}
+
 .article-hightlight-cover{
   flex-grow:2;
   flex: 30%;
@@ -24,7 +40,7 @@ layout: default
 }
 </style>
 
-<div class="container">
+<div class="container snippet-articles">
   {% for post in site.posts %}
   <div class="article-highlight">
     <div class="article-highlight-cover">
