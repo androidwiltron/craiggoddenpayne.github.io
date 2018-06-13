@@ -8,7 +8,7 @@ readtime: 6 minutes
 Last night I attended a session on Mob Programming and Working well together, with guest speaker Woody Zuill, who claims to be one of the founders of the practice. The session was at the coop digital building at Federation House in Manchester city centre.
 
 <amp-img src="/assets/img/2017-1-25-Mob-Programming/2.PNG"
-  width="500"
+  width="400"
   height="300">
 </amp-img>
 
@@ -16,7 +16,7 @@ I attended with a few work friends straight after work, and was luckily only a f
 The evening started with networking, and people just getting to know each other before the main talk with a few beers. Woody talked his experience in the industry, and how mob programming came about, and how much more work  an be achieved working in this way, although the velocity cannot be measured so its difficult to prove. It made me realise the small amount of mobbing I have done so far in my career, is probably not as structured as it should be, and certainly not what Woody would consider mobbing!
 
 <amp-img src="/assets/img/2017-1-25-Mob-Programming/3.PNG"
-  width="500"
+  width="400"
   height="300">
 </amp-img>
 
@@ -25,7 +25,7 @@ He showed photos from all around the world, with companies he has converted to u
 He pointed us to a github page where you can run a client that will tell you when the next person is up for being the driver, but this feels a bit too strict in my opinion.
 
 <amp-img src="/assets/img/2017-1-25-Mob-Programming/4.PNG"
-  width="500"
+  width="400"
   height="300">
 </amp-img>
 
@@ -37,7 +37,7 @@ At the right time
 In the right way
 
 <amp-img src="/assets/img/2017-1-25-Mob-Programming/5.PNG"
-  width="500"
+  width="400"
   height="300">
 </amp-img>
 
@@ -46,7 +46,7 @@ He also spoke about how to work well together, and the basis of this is built wi
 I managed to grab some of the slides, which is a good read and took away a quote he left us with which I found interesting
 
 <amp-img src="/assets/img/2017-1-25-Mob-Programming/6.PNG"
-  width="500"
+  width="400"
   height="300">
 </amp-img>
 
