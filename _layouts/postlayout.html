@@ -20,8 +20,11 @@
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
+        "mainEntityOfPage": "https://craig.goddenpayne.co.uk{{ page.url }}",
         "headline": "{{ page.title }}",
         "datePublished": "{{page.date}}",
+        "dateModified": "{{page.date}}",
+        "description": "{{page.title}}",
         "author":{
           "@type": "Person",
           "name": "Craig Godden-Payne"
@@ -29,11 +32,16 @@
         "publisher": {
           "@type": "Organization",
           "name": "Craig Godden-Payne",
-          "logo": "https://craig.goddenpayne.co.uk/assets/avatar.jpg"
+          "logo": "https://craig.goddenpayne.co.uk/assets/avatar.jpg",
+          "width": 240,
+          "height": 240
         },
-        "image": [
-          "https://craig.goddenpayne.co.uk{{page.image}}"
-        ]
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://craig.goddenpayne.co.uk{{page.image}}",
+          "width":600,
+          "height":600
+        }
       }
     </script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
