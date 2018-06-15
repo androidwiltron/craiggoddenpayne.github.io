@@ -18,4 +18,9 @@ We used various tech for this, from react for the front end, google maps api for
 
 We also won best team name (Hackstreet Boys)!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ptBG-iqT6bo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<amp-youtube
+    data-videoid="ptBG-iqT6bo"
+    layout="responsive"
+    width="480" height="270"></amp-youtube>
