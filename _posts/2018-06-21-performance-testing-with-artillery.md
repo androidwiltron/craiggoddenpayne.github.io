@@ -32,6 +32,7 @@ Here is the one I used:
 - fullapplication-test.yml
 
 ```
+{% raw %}
 config:
   target: "https://url-changed.com"
   processor: "./random-fullapplication-payload.js"
@@ -44,7 +45,8 @@ scenarios:
       - function: "generateRandomPayload"
       - post:
           url: "/fullapplication"
-          json: "{{payload}}"                   
+          json: "{{payload}}"        
+{% endraw %}
 ```
 
 This sends, for 2 minutes, 5 requests per second to https://url-changed.com/fullapplication using a post and the payload that I generate in the function "generateRandomPayload".
