@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up a container cluster in aws with services using terraform
-image: /assets/img/ecs-aws/cover.png
+image: /assets/img/ecs-aws/cover.jpg
 readtime: 4 minutes
 ---
 
