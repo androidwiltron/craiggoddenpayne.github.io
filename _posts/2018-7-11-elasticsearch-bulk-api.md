@@ -5,11 +5,11 @@ image: /assets/img/ElasticsearchBulkApi/cover.jpg
 readtime: 6 minutes
 ---
 
-At work, I recently worked on a project to move from a self hosted elasticsearch cluster in Azure, to the a managed elasticsearch cluster in AWS. The cluster contained analytics tracking information from the website, and we held approximately 3 million documents per day. Some extra challenges that I faced were that I was going from 5.2 of elasticsearch to 6.2, and the mapping that I used had some deprecated types, so the data migration would be somewhat challenging.
+At work, I recently worked on a project to move from a self hosted elasticsearch cluster in Azure, to a managed elasticsearch cluster in AWS. The cluster contained analytics tracking information from the website, and we held approximately 3 million documents per day. Some extra challenges that I faced were that I was going from 5.2 of elasticsearch to 6.2, and the mapping that I used had some deprecated types, so the data migration would be somewhat challenging.
 
 ### The bigger picture
 
-Without giving too much away, we scraped the logs from the webserver behind the load balancer for the whole site, alongside sending custom events from the client. For this we used filebeat, and logstash to interpret the log entry, and build up the final document to elasticsearch. The documents are quite large (usually containing at least 30 individual properties), and we had about a years worth of data. We were not able to reindex the data from source, as we only maintained the logs fgor 30 days, so the idea was to migrate the data from the old instance to the new instance using the bulk api.
+Without giving too much away, we scraped the logs from the webserver behind the load balancer for the whole site, alongside sending custom events from the client. For this we used filebeat, and logstash to interpret the log entry, and build up the final document to elasticsearch. The documents are quite large (usually containing at least 50 individual properties), and we had about a years worth of data. We were not able to reindex the data from source, as we only maintained the logs for 30 days, so the idea was to migrate the data from the old instance to the new instance using the bulk api.
 
 Migration only involved the instance of elasticsearch, filebeat and logstash were to be upgraded, but were going to be maintained, in place.
 
@@ -86,7 +86,7 @@ Once the cluster was up and running, I tried one of the more well known tools fo
 
 I started looking at NEST (because I'd used it before and seemed quite good), but it was incredibly slow.
 
-I basically wrote my own tool, which (using the bulk api) read from the old cluster and wrote to the new cluster. It took a while to migrate the data, but it was much faster than the alternatives. Not the best code, I admit, but did the job in a very limited timeframe!
+I basically wrote my own tool, which (using the bulk api) read from the old cluster, transformed the data, and wrote to the new cluster. It took a while to migrate the data, but it was much faster than the alternatives. Not the best code, I admit, but did the job in a very limited timeframe!
 
 <amp-img class="center" src="/assets/img/ElasticsearchBulkApi/elasticsearch.jpg"
   width="545"
