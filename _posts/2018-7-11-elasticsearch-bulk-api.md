@@ -16,8 +16,8 @@ Migration only involved the instance of elasticsearch, filebeat and logstash wer
 ### Migration to AWS using terraform
 
 <amp-img class="center" src="/assets/img/ElasticsearchBulkApi/terraform.jpg"
-  width="709"
-  height="195"
+  width="1065"
+  height="661"
   layout="responsive">
 </amp-img>
 
@@ -89,8 +89,8 @@ I started looking at NEST (because I'd used it before and seemed quite good), bu
 I basically wrote my own tool, which (using the bulk api) read from the old cluster and wrote to the new cluster. It took a while to migrate the data, but it was much faster than the alternatives. Not the best code, I admit, but did the job in a very limited timeframe!
 
 <amp-img class="center" src="/assets/img/ElasticsearchBulkApi/elasticsearch.jpg"
-  width="709"
-  height="195"
+  width="545"
+  height="300"
   layout="responsive">
 </amp-img>
 
