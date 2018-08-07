@@ -3,6 +3,7 @@ layout: post
 title: Setting up CI environment using Docker, ECS and terraform for Thoughtworks GoCD
 image: /assets/img/GOCD/cover.jpg
 readtime: 12 minutes
+tags: terraform, aws, docker, ecs, ecr, gocd, thoughtworks, dittomusic, ci, cd
 ---
 
 One of my first tasks for my new job at Ditto Music, was to setup the CI server in a way that would be easier to manage and scalable. There was an existing instance of Thoughtworks GOCD CI, which consisted of the Server Running on a T2.small, and a couple of agents running on T2.micro. Each of the agents were manually configured, so scaling could be a challenge, and also creating new agents to be able to create different resource types could also prove timecostly.
