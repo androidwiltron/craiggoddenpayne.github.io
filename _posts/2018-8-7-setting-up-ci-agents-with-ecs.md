@@ -5,7 +5,7 @@ image: /assets/img/GOCD/cover.jpg
 readtime: 12 minutes
 ---
 
-One of my first tasks for my new job at Ditto Music, was to setup the CI server in a way that would be easier to manage and scalable. There was an existing instance of Thoughtworks GOCD CI, which consisted of the Server Running on a T2.small, and a couple of agents running on T2.micro. Each of the agents were manually configured, so scaling could be a challenge, and also ccreating new agents to be able to create different resource types could also prove timecostly.
+One of my first tasks for my new job at Ditto Music, was to setup the CI server in a way that would be easier to manage and scalable. There was an existing instance of Thoughtworks GOCD CI, which consisted of the Server Running on a T2.small, and a couple of agents running on T2.micro. Each of the agents were manually configured, so scaling could be a challenge, and also creating new agents to be able to create different resource types could also prove timecostly.
 
 ### Docker to the rescue?
 
@@ -13,7 +13,7 @@ It felt like a natural fit for using docker.
 
 I needed to spin up potentially multiple instances of the same instance, and wanted a way to easily manage the software installed on the images.
 
-Our cloud service provider is AWS, so it felt right that this went hand in hand with ECS - Elastic Container Service, and stored our agent images in ECR - Elastic Container Repository. I also wanted to use terraform, so that chhanges to the overall infrastructure could be managed through a deployment.
+Our cloud service provider is AWS, so it felt right that this went hand in hand with ECS - Elastic Container Service, and stored our agent images in ECR - Elastic Container Repository. I also wanted to use terraform, so that changes to the overall infrastructure could be managed through a deployment.
 
 
 <amp-img class="center" src="/assets/img/GOCD/docker.png"
@@ -44,7 +44,7 @@ These we relatively straightforward to setup in terraform and bash, and can be t
 
 Setting up the container host in terraform is pretty straight forward, as it is just an EC2 instance, running an optimised ECS ami. I opted to use the Amazon ecsInstanceRole for the iam role, rather than create my own, as it already existed for me.
 
-[https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html)
+[IAM docs for ecsInstanceRole](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html)
 
 ```
 resource "aws_ecs_cluster" "ci-container-cluster" {
