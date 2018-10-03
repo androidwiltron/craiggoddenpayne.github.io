@@ -25,11 +25,10 @@ It's also worth noting that each import has a different syntax, so its worth che
 
 Take the scenario:
 
-```
 Something was going wrong in live, and you quickly had to make a change to a change to add a DNS record to route 53. Once things had settled down you defined the same record in your terraform file, but when you ran apply, you found that the resource already existed, causing the apply to fail.
 
 You want to import the state that already exists, so that next time you apply, terraform already knows that the resource exists, and any changes made going forward will be picked up as modifications.
-```
+
 
 I'm going to pretend that in an emergency, I created the following
 
@@ -114,11 +113,10 @@ This usually where you have something like an EC2 instance, but not sure of the 
 
 Take the scenario:
 
-```
 Something went wrong, and you had to quickly migrate from a physical server to EC2. You spun up an EC2 and applied a load of settings. Once things settled down, you wanted to build the terraform and sync the state
 
 You don't know where to start, all you know is that we built an EC2 instance
-```
+
 
 I'm going to pretend that in an emergency I created the following
 
