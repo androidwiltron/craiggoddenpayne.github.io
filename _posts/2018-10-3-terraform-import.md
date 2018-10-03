@@ -21,7 +21,7 @@ At present time, it's not possible to directly take an AWS resource, and import 
 It's also worth noting that each import has a different syntax, so its worth checking with the AWS documentation, but here are some examples to get you going.
 
 
-###1 - You have already defined the resource and want to tell the state that this resource already exists.
+### 1 - You have already defined the resource and want to tell the state that this resource already exists.
 
 Take the scenario:
 
