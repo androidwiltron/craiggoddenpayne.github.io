@@ -103,7 +103,7 @@ Here are my references to the code repo and lambda package output
 data "aws_s3_bucket" "lambda-repository" {
   bucket = "craiggoddenpayne-lambda-respository"
 }
-data "aws_s3_bucket_object" "sale-record-queue-processor" {
+data "aws_s3_bucket_object" "my-record-queue-processor" {
   key = "my-records/${var.application_version}/my-record-queue-processor.zip"
   bucket = "${data.aws_s3_bucket.lambda-repository.bucket}"
 }
@@ -113,7 +113,7 @@ Its worth looking at my iam policies also, they are very open and should really 
 
 ```
 resource "aws_iam_role" "lambda-iam-role" {
-  name = "sale-record-queue-processorlambda-iam-role"
+  name = "my-record-queue-processorlambda-iam-role"
 
   assume_role_policy = <<EOF
 {
@@ -133,7 +133,7 @@ EOF
 }
 
 resource "aws_iam_policy" "lambda-s3-read-write-access" {
-  name = "sale-record-queue-processorlambda-s3-read-write"
+  name = "my-record-queue-processorlambda-s3-read-write"
   policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -154,7 +154,7 @@ EOF
 
 
 resource "aws_iam_policy" "lambda-vpc" {
-  name = "sale-record-queue-processorlambda-vpc"
+  name = "my-record-queue-processorlambda-vpc"
   policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -179,7 +179,7 @@ EOF
 }
 
 resource "aws_iam_policy" "lambda-logs" {
-  name = "sale-record-queue-processorlambda-logs"
+  name = "my-record-queue-processorlambda-logs"
   policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -208,7 +208,7 @@ EOF
 
 
 resource "aws_iam_policy" "lambda-sqs-access" {
-  name = "sale-record-queue-processorsqs-access"
+  name = "my-record-queue-processorsqs-access"
   policy = <<EOF
 {
    "Version": "2012-10-17",
@@ -222,7 +222,7 @@ EOF
 }
 
 resource "aws_iam_policy_attachment" "lambda-s3-read-write-access" {
-  name = "sale-record-queue-processorlambda-s3-read-write-access"
+  name = "my-record-queue-processorlambda-s3-read-write-access"
   policy_arn = "${aws_iam_policy.lambda-s3-read-write-access.arn}"
   roles = [
     "${aws_iam_role.lambda-iam-role.name}"
@@ -230,7 +230,7 @@ resource "aws_iam_policy_attachment" "lambda-s3-read-write-access" {
 }
 
 resource "aws_iam_policy_attachment" "lambda-vpc" {
-  name = "sale-record-queue-processorlambda-vpc-access"
+  name = "my-record-queue-processorlambda-vpc-access"
   policy_arn = "${aws_iam_policy.lambda-vpc.arn}"
   roles = [
     "${aws_iam_role.lambda-iam-role.name}"
@@ -238,7 +238,7 @@ resource "aws_iam_policy_attachment" "lambda-vpc" {
 }
 
 resource "aws_iam_policy_attachment" "lambda-logs" {
-  name = "sale-record-queue-processorlambda-logging"
+  name = "my-record-queue-processorlambda-logging"
   policy_arn = "${aws_iam_policy.lambda-logs.arn}"
   roles = [
     "${aws_iam_role.lambda-iam-role.name}"
@@ -246,7 +246,7 @@ resource "aws_iam_policy_attachment" "lambda-logs" {
 }
 
 resource "aws_iam_policy_attachment" "lambda-sqs-access" {
-  name = "sale-record-queue-processorlambda-sqs-access"
+  name = "my-record-queue-processorlambda-sqs-access"
   policy_arn = "${aws_iam_policy.lambda-sqs-access.arn}"
   roles = [
     "${aws_iam_role.lambda-iam-role.name}"
