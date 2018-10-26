@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Processing an SQS queue, using lambda without event source triggers, using terraform
+title: Processing an SQS queue without manual polling, using lambda with event source triggers, built using terraform
 image: /assets/img/setting-up-serverless-api-dot-net-core/cover.jpg
 readtime: 12 minutes
 ---
