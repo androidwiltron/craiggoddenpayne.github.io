@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Processing an SQS queue, using lambda without event source triggers, using terraform
-image: /assets/img/terraform-import/cover.png
+image: /assets/img/setting-up-serverless-api-dot-net-core/cover.jpg
 readtime: 12 minutes
 ---
 
