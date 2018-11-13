@@ -43,7 +43,7 @@ The main things we aimed to do were
 The idea we came up was 
 - A native Android app, GraphQL, DotNetCore WebApi, AWS, React.js, ElasticSearch, TwitterApi, Google Maps Api
 - Which plots the safest route from A to B, helping to keep the user safe
-- By checking open data sets (Police Stop and Search data, TFGM traffic data, Ufo Sightings, Ghost Sightings) and live real time data by scrapping twitter fot certain keywords
+- By checking open data sets (Police Stop and Search data, TFGM traffic data, Ufo Sightings, Ghost Sightings) and live real time data by scraping twitter fot certain keywords
 - With the fun element being a dark mode, which flipped the idea, allowing the user to participate in crime.
 
 <amp-img src="/assets/img/hack-manchester-2018/table.jpg"
@@ -81,21 +81,23 @@ Above is the message we got (which has since been deleted from slack, I guess be
 mess up, they don't want people to know publicly what happened)
 
 
-As you can imagine, after 25 hours (yes we didn't sleep, and put our best into this idea) you can sense the frustration.
+As you can imagine, after 25 hours (yes we didn't get much sleep at all, and put our best into this idea) you can sense the frustration.
 I didn't want to go to the awards ceremony, but was conviced to at least have a word with the judges to
 find out what is happening.
 
-I did speak with the judge, and they failed to convince me that we were not disqualified.
+I did speak with the judge, and they failed to convince me that we were not disqualified. I was told our
+video was judged, but it sounded more like they didn't want to annoy me with such a mix up.
 
 
 
 After the judging, it annoyed me a bit that we saw judges during the day, but they were not even
-at the awards ceremony, and our category seemed to be overlooked compared to the rest.
+at the awards ceremony, and our category seemed to be overlooked compared to the rest. GCHQ did not
+even attend the awards ceremony, and instead the category was awarded by the coop instead.
 
 
 The winner of our category, I can honestly say I did not see the code, or understand the challenges they
 faced, but it seemed so far off brief that it made no sense that they won. The other runner up in our
-category I would say was on par in terms of brief, choice of tech, and would have been a worthy winner 
+category I would say was on par with our idea in terms of brief, funny video, good choice of tech, and would have been a worthy winner 
 if selected.
 
 <amp-img src="/assets/img/hack-manchester-2018/code.jpg"
@@ -119,6 +121,5 @@ feel like the competition is just a PR stunt, and not a breeding ground for inno
 likeminded developers, and something to have a laugh and build something crazy for 25 hours.
 
 If you are entering next year, you should ask the judging panel to make their data open, even if its 
-finding out how many votes each team went. We were messed about on many levels, and because of this I
-feel like I won't support hack manchester, even though it's something I'm very passionate about.
-
+finding out how many votes each team got. 
+I now feel like I won't support hack manchester, and if you know me, it's all I talk about, and look forward to, and I usually tell everyone I know who is a dev about it, because it was awesome at one point.
