@@ -6,11 +6,6 @@ readtime: 8 minutes
 tags: Hack Manchester, HackMcr, HacManchester 2018, Hackathon, Manchester
 ---
 
-I found this blog post probably one of the most difficult I have ever had to write, which is why it 
-has taken me so long to, there are as few points in here that I've tried my best to be as sensitive 
-and professional as possible, but I feel I had to talk about it, because well, someone has to...
-
-
 Me and a couple of guys from the office entered HackManchester (me for the third year running). 
 We also gained an additional member of the team, Jon was looking to join a team.
 
@@ -106,6 +101,9 @@ if selected.
   layout="responsive">
 </amp-img>
 
+For the next bit, you need to understand that I found this blog post probably one of the most 
+difficult I have ever had to write, which is why it has taken me so long to, there are as few 
+points in here that I've tried my best to be as sensitive and professional as possible.
 
 I feel like we were not the only team who deserved something more than they got, it felt very much
 like the theme this year was not skill or achievement. Don't get me wrong, a few ideas won this year
