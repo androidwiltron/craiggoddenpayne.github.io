@@ -17,8 +17,8 @@ We also gained an additional member of the team, Jon was looking to join a team.
 We got to MOSI at around about 12, found a good table and awaited the challenges.
 
 <amp-img src="/assets/img/hack-manchester-2018/mosi.jpg"
-  width="800"
-  height="600"
+  width="600"
+  height="450"
   layout="responsive">
 </amp-img>
 
