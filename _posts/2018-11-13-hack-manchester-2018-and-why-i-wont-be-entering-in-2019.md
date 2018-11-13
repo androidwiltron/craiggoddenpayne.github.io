@@ -17,8 +17,8 @@ We also gained an additional member of the team, Jon was looking to join a team.
 We got to MOSI at around about 12, found a good table and awaited the challenges.
 
 <amp-img src="/assets/img/hack-manchester-2018/mosi.jpg"
-  width="328"
-  height="149"
+  width="800"
+  height="600"
   layout="responsive">
 </amp-img>
 
@@ -46,29 +46,39 @@ The idea we came up was
 - By checking open data sets (Police Stop and Search data, TFGM traffic data, Ufo Sightings, Ghost Sightings) and live real time data by scrapping twitter fot certain keywords
 - With the fun element being a dark mode, which flipped the idea, allowing the user to participate in crime.
 
+<amp-img src="/assets/img/hack-manchester-2018/table.jpg"
+  width="600"
+  height="450"
+  layout="responsive">
+</amp-img>
+
 
 What we ended up building was this:
 
 
-<amp-img src="/assets/img/hack-manchester-2018/mosi.jpg"
-  width="328"
-  height="149"
-  layout="responsive">
-</amp-img>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-a8t40osj7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 We felt like we had targeted the brief well, and that we had a good chance at winning!
 
+<amp-img src="/assets/img/hack-manchester-2018/idea.jpg"
+  width="600"
+  height="378"
+  layout="responsive">
+</amp-img>
 
+ 
 An hour before we were due to attend the awards ceremony, we saw a message on the HackManchester channel, 
 saying that we had been disqualified due to not submitting a video.
 
 <amp-img src="/assets/img/hack-manchester-2018/message.jpg"
-  width="328"
-  height="149"
+  width="600"
+  height="1066"
   layout="responsive">
 </amp-img>
+
+Above is the message we got (which has since been deleted from slack, I guess because its such a massive
+mess up, they don't want people to know publicly what happened)
 
 
 As you can imagine, after 25 hours (yes we didn't sleep, and put our best into this idea) you can sense the frustration.
@@ -82,9 +92,15 @@ I did speak with the judge, and they failed to convince me that we were not disq
 After the judging, it annoyed me a bit that we saw judges during the day, but they were not even
 at the awards ceremony, and our category seemed to be overlooked compared to the rest.
 
-<amp-img src="/assets/img/hack-manchester-2018/mosi.jpg"
-  width="328"
-  height="149"
+
+The winner of our category, I can honestly say I did not see the code, or understand the challenges they
+faced, but it seemed so far off brief that it made no sense that they won. The other runner up in our
+category I would say was on par in terms of brief, choice of tech, and would have been a worthy winner 
+if selected.
+
+<amp-img src="/assets/img/hack-manchester-2018/code.jpg"
+  width="600"
+  height="450"
   layout="responsive">
 </amp-img>
 
@@ -104,5 +120,5 @@ likeminded developers, and something to have a laugh and build something crazy f
 
 If you are entering next year, you should ask the judging panel to make their data open, even if its 
 finding out how many votes each team went. We were messed about on many levels, and because of this I
-feel like I won't support hack manchester as a thing, even though it's something I'm very passionate about.
+feel like I won't support hack manchester, even though it's something I'm very passionate about.
 
