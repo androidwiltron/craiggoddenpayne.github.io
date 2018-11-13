@@ -38,7 +38,7 @@ The main things we aimed to do were
 The idea we came up was 
 - A native Android app, GraphQL, DotNetCore WebApi, AWS, React.js, ElasticSearch, TwitterApi, Google Maps Api
 - Which plots the safest route from A to B, helping to keep the user safe
-- By checking open data sets (Police Stop and Search data, TFGM traffic data, Ufo Sightings, Ghost Sightings) and live real time data by scraping twitter fot certain keywords
+- By checking open data sets (Police Stop and Search data, TFGM traffic data, Ufo Sightings, Ghost Sightings) and live real time data by scraping twitter for certain keywords
 - With the fun element being a dark mode, which flipped the idea, allowing the user to participate in crime.
 
 <amp-img src="/assets/img/hack-manchester-2018/table.jpg"
