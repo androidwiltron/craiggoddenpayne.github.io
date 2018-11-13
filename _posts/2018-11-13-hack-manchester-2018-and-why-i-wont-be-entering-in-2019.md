@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hack Manchester 2018, and why I won't be entering in Hack Manchester 2019
+title: Hack Manchester 2018 - Runner up for GCHQ challenge
 image: /assets/img/hack-manchester-2018/cover.jpg
 readtime: 8 minutes
 tags: Hack Manchester, HackMcr, HacManchester 2018, Hackathon, Manchester
@@ -82,7 +82,7 @@ mess up, they don't want people to know publicly what happened)
 
 
 As you can imagine, after 25 hours (yes we didn't get much sleep at all, and put our best into this idea) you can sense the frustration.
-I didn't want to go to the awards ceremony, but was conviced to at least have a word with the judges to
+I didn't want to go to the awards ceremony, but was convinced to at least have a word with the judges to
 find out what is happening.
 
 I did speak with the judge, and they failed to convince me that we were not disqualified. I was told our
@@ -108,18 +108,27 @@ if selected.
 
 
 I feel like we were not the only team who deserved something more than they got, it felt very much
-like the theme this year was year of the women in tech. Don't get me wrong, I whole heartedly support
-women in tech, its a great inititive, but it feels by lowering the bar / promoting it in this way
-goes against what you are trying to achieve in the first place, all it creates is something people 
-cannot aspire to, surely equality is what people want, and I feel this year the decision for best in
-show was a very clear nod to a worthy inititive, but at the expense of the time and effort the majority
-of teams put in to enter what should have been an equal playing field competition.
+like the theme this year was not skill or achievement. Don't get me wrong, a few ideas won this year
+which were promoted as women in tech, which I whole heartedly support, its a great inititive!
+But it cheapens the cause when its obvious other projects were better, as it feels like you are 
+lowering the bar to entry by promoting it in this way, and surely this goes against what you are 
+trying to achieve in the first place. It creates something people cannot aspire to, 
+especially when equality is what people want. 
+
+I feel this year the decision for best in show was a very clear nod to a worthy inititive, 
+but at the expense of the time and effort the majority of teams put in to enter what should have 
+been an equal playing field competition. 
 
 I know it probably makes me look like a sore loser, but honestly, it took a lot for me to speak out
 about this, something I put a lot of time and effort in and was very passionate about, and it made me 
 feel like the competition is just a PR stunt, and not a breeding ground for innovation, a place to meet
-likeminded developers, and something to have a laugh and build something crazy for 25 hours.
+like-minded developers, and something to have a laugh and build something crazy for 25 hours.
 
 If you are entering next year, you should ask the judging panel to make their data open, even if its 
-finding out how many votes each team got. 
-I now feel like I won't support hack manchester, and if you know me, it's all I talk about, and look forward to, and I usually tell everyone I know who is a dev about it, because it was awesome at one point.
+finding out how many votes each team got. I now feel like I won't support hack manchester, and if 
+you know me, it's all I talk about, and look forward to, and I usually tell everyone I know who
+is a dev about it, because it was awesome at one point.
+  
+If you want to enter a competition for fun, thats all good, but don't enter expecting it to 
+be a competition with fair rules, a place to build something unique that pushes the boundaries 
+and tests your skills. 
