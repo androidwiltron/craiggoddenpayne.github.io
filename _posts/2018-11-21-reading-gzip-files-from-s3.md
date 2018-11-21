@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using dotnet to read gzip streams from s3
-image: /assets/img/gzip-elastic/cover.jpg
+image: /assets/img/gzip-elastic/cover.png
 readtime: 3 minutes
 tags: gzip, dotnet, csharp
 ---
