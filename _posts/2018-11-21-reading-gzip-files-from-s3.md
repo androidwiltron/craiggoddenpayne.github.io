@@ -6,11 +6,16 @@ readtime: 3 minutes
 tags: gzip, dotnet, csharp
 ---
 
-I came across a bug recently when reading gzip streams.
+*TLDR - Theres a bug in the dotnet gzip compression library, and it doesn't seem like it's going to be fixed anytime soon*
+
+So I came across a bug recently when reading gzip streams. 
 
 I was working on a project where the logs from an ALB were being stored in s3. Periodically, my code would
 call s3 and read the streams and process them into elasticsearch. What I found was that the official dotnet 
-gzip library would only read about the first 6 or 7 lines.
+gzip library would only read about the first 6 or 7 lines. I was pulling my hair out, I tried different things,
+I was convinced I had somehow not flushed a stream or copied the decompressed stream incorrectly or something.
+
+My code was very simple:
 
 
 ```
@@ -31,17 +36,17 @@ var request = new GetObjectRequest
 };
 ```
 
-<amp-img src="/assets/img/gzip-elastic/gzip.svg"
-  width="586"
-  height="586"
-  layout="responsive">
-</amp-img>
-
 
 It had me head scratching for a long time, and it turns out there's a bug in the dotnet library for decompression.
 It seems like there's a lot of people out there struggling with this.
 
-What I did was to use the SharpZipLib nuget library instead, which worked a charm
+<amp-img src="/assets/img/gzip-elastic/gzip.svg"
+  width="300"
+  height="300"
+  layout="responsive">
+</amp-img>
+
+What I did was to use the SharpZipLib nuget library instead, which worked a charm, and I didn't actually have to change the code too much:
 
 ```
 using (var response = _s3Client.GetObjectStreamAsync(s3Object.BucketName, s3Object.Key, null).GetAwaiter().GetResult())
@@ -68,7 +73,9 @@ using (var response = _s3Client.GetObjectStreamAsync(s3Object.BucketName, s3Obje
 }
 ```
 
-I will blog about the solution I created for this in a later post, something I was trying out. 
+I will blog about the solution I created for writing logs to elasticsearch using dotnet and lambda serverless in a later post.
+ It was a proof of concept, but seems to work quite well!
+  
 In the past I've used logstash to process logs into elastic, but I wanted somethat that I could run
 serverless, and only process when I wanted, which is why I went down this route.
 
