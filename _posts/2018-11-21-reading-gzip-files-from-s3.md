@@ -22,8 +22,7 @@ My code was very simple:
 var s3Object = _s3Client.GetObjectAsync(s3Notification.S3.Bucket.Name, s3Notification.S3.Object.Key).GetAwaiter().GetResult();
 using (var decompressionStream = new GZipStream(s3Object.ResponseStream, CompressionMode.Decompress))
 using (var decompressedStream = new MemoryStream())
-var request = new GetObjectRequest
-{
+{   
     decompressionStream.CopyTo(decompressedStream);
     decompressionStream.Flush();
     decompressedStream.Flush();
