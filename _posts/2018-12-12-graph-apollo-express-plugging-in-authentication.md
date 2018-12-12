@@ -22,7 +22,7 @@ In it's simplist form, once a session had been logged in, we can fetch the sessi
 
 The GraphQL module we are using, is based upon ApolloServerExpress within node, which after trying a few alternatives, we quite liked. In order to allow graphql to pull the session id from the cookie, I needed to allow access for the request context within apollo, which meant passing in the expresss req object as a context. 
 
-Also its worth mentioning, that by default, express does not have good built in support for cookies, so I included the npm module `cookie-parser` and added it to the middleware to make sure the cookies are put in the requerst pipeline.
+Also its worth mentioning, that by default, express does not have good built in support for cookies, so I included the npm module `cookie-parser` and added it to the middleware to make sure the cookies are put in the request pipeline.
 
 Here is an example of the initial setup:
 
@@ -47,7 +47,7 @@ app.listen({ port }, () =>
 </amp-img>
 
 
-Once all the setup was done, I started by creating a GraphQL type to allow us ti translate the SessionId into a UserId. 
+Once all the setup was done, I started by creating a GraphQL type to allow us to translate the SessionId into a UserId. 
 
 I am going to use an instance of an AuthenticatedUserSessionService, which will lookup the user id, from the session id from the cookie. 
 
@@ -71,7 +71,7 @@ export {
 ```
 
 
-Then I also need to setup the schema, so that I can resolve the data. As you can see, I pass `context.req.cookies.SESSIONID` to my AuthenticationSessionService, which will resolve the UserId of the authenticated session.
+Then I need to setup the schema, so that I can resolve the data. As you can see, I pass `context.req.cookies.SESSIONID` to my AuthenticationSessionService, which will resolve the UserId of the authenticated session.
 
 ```
 import { graphql } from 'graphql-compose';
@@ -96,7 +96,7 @@ const schema = new GraphQLSchema({
 export default schema;
 ```
 
-Now all the groundwork is down to resolve the UserId from the SessionId cookie using the AuthenticationService, it can now be used in place of any of the queries, which pass a userId, which in term will secure the service, and only allow the signed in user to access his own data.
+Now all the groundwork is down to resolve the UserId from the SessionId cookie using the AuthenticationService, it can now be used in place of any of the queries, which pass a userId in to query, which in turn will secure the service, and only allow the signed in user to access his own data.
 
 <amp-img src="/assets/img/graphql-authenticated-session/tunnel.png"
   width="974"
