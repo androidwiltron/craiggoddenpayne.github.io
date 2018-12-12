@@ -3,7 +3,7 @@ layout: post
 title: Plugging an existing authenticated session into GraphQl
 image: /assets/img/graphql-authenticated-session/cover.png
 readtime: 3 minutes
-tags: gzip, dotnet, csharp
+tags: graphql apollo
 ---
 
 I've recently started working with GraphQL, and I really like it! In work capacity, we have so far used it to talk to a few different services and databases. One of the advantages of GraphQL is the ability to query your data in anyway, which is a bit contradictory to this blog post.
@@ -20,7 +20,7 @@ We want to restrict certain queries to only be run and return data for the authe
 In it's simplist form, once a session had been logged in, we can fetch the session from the backend using a session id against a database of authenticated sessions. We're not going to handle authenticating sessions, that is handled elsewhere in the stack.
 
 
-The GraphQL app we are using, is based upon ApolloServerExpress within node, which after trying a few alternatives, we quite liked. In order to allow graphql to pull the session id from the cookie, 
+The GraphQL module we are using, is based upon ApolloServerExpress within node, which after trying a few alternatives, we quite liked. In order to allow graphql to pull the session id from the cookie, 
 
 I needed to allow access for the request context within apollo, which meant passing in the expresss req object as a context. 
 
