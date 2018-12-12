@@ -20,9 +20,7 @@ We want to restrict certain queries to only be run and return data for the authe
 In it's simplist form, once a session had been logged in, we can fetch the session from the backend using a session id against a database of authenticated sessions. We're not going to handle authenticating sessions, that is handled elsewhere in the stack.
 
 
-The GraphQL module we are using, is based upon ApolloServerExpress within node, which after trying a few alternatives, we quite liked. In order to allow graphql to pull the session id from the cookie, 
-
-I needed to allow access for the request context within apollo, which meant passing in the expresss req object as a context. 
+The GraphQL module we are using, is based upon ApolloServerExpress within node, which after trying a few alternatives, we quite liked. In order to allow graphql to pull the session id from the cookie, I needed to allow access for the request context within apollo, which meant passing in the expresss req object as a context. 
 
 Also its worth mentioning, that by default, express does not have good built in support for cookies, so I included the npm module `cookie-parser` and added it to the middleware to make sure the cookies are put in the requerst pipeline.
 
