@@ -3,7 +3,7 @@ layout: post
 title: '#DevOps and the evolution from Developer to multi skilled Engineer'
 image: /assets/img/devops/devops.png
 readtime: 18 minutes
-tags: noops, devops, iaas, terraform, aws, engineer, 
+tags: devops, iaas, terraform, aws, engineer, 
 ---
 
 *TLDR - DevOps is awesome, DevOps is not scary, and using the right tools and patterns will allow you to easily transition from Software Developer to Software Engineer and keep ahead of the trend*
@@ -22,7 +22,7 @@ By applying DevOps to your current role, you create the ability for your company
   layout="responsive">
 </amp-img>
 
-As an engineerm you should be able to work across the full application lifecycle, including (but not limited to) development, testing, deployment and infrastructure, even sometimes quality assurance and infosec. If you make as much of the process  automated as possible, it prevents leaving an individual holding all the knowledge, and also helps prevents bottlenecks between teams waiting on other teams.
+As an engineer, you should be able to work across the full application lifecycle, including (but not limited to) development, testing, deployment and infrastructure, even sometimes quality assurance and infosec. If you make as much of the process  automated as possible, it prevents leaving an individual holding all the knowledge, and also helps prevents bottlenecks between teams waiting on other teams.
 
 Theres a wide school of though online that its the next evolution of software engineers.
 
@@ -62,7 +62,7 @@ For developers who traditionaly have never worked on deployments, or delivering 
 
 At ditto music, one of the first patterns we worked on, was to create a reusable deployment pattern. We wanted to automate the provisioning of the instance, and have a platform where the code can just be deployed. There are many options for this, at the time we built the pattern we evaluated and decided on AWS Elastic Container Service.
 
-Our deployment pattern took a built artifact, such as a dotnet dll, or node project, and built a docker image, pushed to our own Elastic Container Repository and used a templated service and task to be able to run the 'WebApp' in a predicatable and similar way across technology stacks. We use it for long running services, rest services, graphql, websites etc.
+Our deployment pattern took a built artifact such as a dotnet dll or node project, and we build a docker image, pushed to our own Elastic Container Repository and used a templated service and task to be able to run the 'WebApp' in a predicatable and similar way across technology stacks. We use it for long running services, rest services, graphql, websites etc.
 
 Because of the way ECS works, it was very simple to build secure permissions and apply this across the whole infra. Anything that needs more than just the basics, could apply it manually. Terraform modules really helped with this.
 
