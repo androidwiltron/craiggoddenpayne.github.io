@@ -8,7 +8,7 @@ tags: devops, iaas, terraform, aws, engineer,
 
 *TLDR - DevOps is awesome, DevOps is not scary, and using the right tools and patterns will allow you to easily transition from Software Developer to Software Engineer and keep ahead of the trend*
 
-*First its worth having a look at the definiton of what DevOps is,*  bear in mind DevOps is a term that still does not have a solid definitions, and a lot of people get confused as to what it is:
+*First its worth having a look at the definiton of what DevOps is,*  bear in mind DevOps is a term that still does not have a solid definition, and a lot of people get confused as to what it is:
 
 DevOps is a term emerging from the collision of two major related trends. The first was also called “agile infrastructure” or “agile operations”; it sprang from applying Agile and Lean approaches to operations work. The second is a much expanded understanding of the value of collaboration between development and operations staff throughout all stages of the development lifecycle when creating and operating a service, and how important operations has become in our increasingly service-oriented world.
 
@@ -169,4 +169,4 @@ e.g. if an application needs to call SQS, then we add a permission to the single
 
 # Conclusion
 
-In conclusion, DevOps is forever despite the cries of DevOps demise, the core principles that DevOps have will live on as long as businesses require software to succeed in a fast-paced, rapidly changing technological landscape. In a few years, the name may fade away in favor of a new buzzword, but the culture and the contributions of the DevOps community will live on.
+In conclusion, DevOps is forever despite the cries of DevOps demise, the core principles that DevOps have will live on as long as businesses require software to succeed in a fast-paced, rapidly changing technological landscape. In a few years, the name may fade away in favour of a new buzzword, but the culture and the contributions of the DevOps community will live on.
