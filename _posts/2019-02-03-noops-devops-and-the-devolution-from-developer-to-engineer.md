@@ -13,6 +13,13 @@ First its worth having a look at the definiton of what devops is, bear in mind D
 Devops combines creates the ability for companies to deliver applications with high velocity, by using tools, practices and cultural philosophies to improve and evolve faster than tradition software practices that rely on other siloed teams. Engineers work across the full application lifecycle, including (but not limited to) development, testing, deployment and infrastructure, even sometimes quality assurance and infosec. As much as possible is automated, which prevents leaving an individual holding all the knowledge, and also helps prevents bottlenecks.
 
 
+<amp-img src="/assets/img/noops-devops/devopscycle.png"
+  width="1000"
+  height="567"
+  layout="responsive">
+</amp-img>
+
+
 ## The No Ops Movement
 
 No ops focuses more on the fact that traditionally operations teams that manage and deploy to underlying infrastructure will eventually become obsolete, as the jobs that they would have performed traditionally have evolved, and when moved to the cloud, can and should be performed by multi skilled engineers, focused on the full application lifecycle.
@@ -97,8 +104,3 @@ Learning and improvement shouldn’t happen only when things go wrong. Everyone 
 
 In conclusion, DevOps is forever
 Despite the cries of DevOps demise, NoOps is not the end of DevOps. In fact, NoOps is only the beginning of the innovations we can achieve together with DevOps. The movement started long before DevOps had a name, and the core principles will live on as long as businesses require software to succeed in a fast-paced, rapidly changing technological landscape. In a few years, the name may fade away in favor of a new buzzword, but the culture and the contributions of the DevOps community will live on.
-<amp-img src="/assets/img/graphql-authenticated-session/tunnel.png"
-  width="974"
-  height="564"
-  layout="responsive">
-</amp-img>
