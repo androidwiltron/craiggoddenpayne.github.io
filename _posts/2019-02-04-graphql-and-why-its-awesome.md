@@ -16,6 +16,13 @@ We have a whole host of backend internal services, which allow us to look up dom
 
 At present though, we are dependent on a single huge monolith database which holds all data about pretty much everything about the business.
 
+<amp-img src="/assets/img/graphql/monolith.jpeg"
+  width="852"
+  height="874"
+  layout="responsive">
+</amp-img>
+
+
 Since all of these apis are new, we need a way to expose some of this data publically, to be able to populate the new sales area we are working on. This is where GraphQL really helped us out!
 
 To improve performance, we migrated all of the royalty data out of the monolith and into elasticsearch for many reasons, the main being the current sales area would slow down anything attached to the monolith when  querying a user with a massive amount of releases or sales.
@@ -50,8 +57,9 @@ query {
 
 ```
 
-Obviously, because of this approach, its importasnt that we dont make all the data avaiable to the user. We limited this by having the backend of the Sales UI make predefined calls to GraphQL, and also made sure that any queries to elasticsearch were predefined to not allow users to query each others data. 
+Obviously, because of this approach, its important that we dont make all the data available to the user. We limited this by having the backend of the Sales UI make predefined calls to GraphQL, and also made sure that any queries to elasticsearch were predefined to not allow users to query each others data. 
 
+The sales area that previously could take well over many seconds, sometimes even as many as 20, should be able to load in under a couple, well it will once it goes live to all users!
 
 <amp-img src="/assets/img/graphql/iknowgraphql.jpeg"
   width="225"
