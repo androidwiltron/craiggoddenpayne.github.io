@@ -1,36 +1,56 @@
 ---
 layout: post
-title: '#NoOps, #DevOps and the evolution from developer to multi skilled engineer'
-image: /assets/img/noops-devops/devops.png
+title: '#DevOps and the evolution from Developer to multi skilled Engineer'
+image: /assets/img/devops/devops.png
 readtime: 18 minutes
 tags: noops, devops, iaas, terraform, aws, engineer, 
 ---
 
-*TLDR - Devops is awesome, and it looks like it will eventually replace a whole host of other business functions. DevOps is not scary, and using the right tools and patterns will allow you to easily transition*
+*TLDR - DevOps is awesome, DevOps is not scary, NoOps is the future, and using the right tools and patterns will allow you to easily transition from Software Developer to Software Engineer and keep ahead of the trend*
 
-First its worth having a look at the definiton of what devops is, bear in mind Devops is a term that still does not have a solid definitions, and a lot od people get confused as to what it is. Here is my understanding:
+*First its worth having a look at the definiton of what DevOps is,*  bear in mind DevOps is a term that still does not have a solid definitions, and a lot of people get confused as to what it is:
 
-Devops combines creates the ability for companies to deliver applications with high velocity, by using tools, practices and cultural philosophies to improve and evolve faster than tradition software practices that rely on other siloed teams. Engineers work across the full application lifecycle, including (but not limited to) development, testing, deployment and infrastructure, even sometimes quality assurance and infosec. As much as possible is automated, which prevents leaving an individual holding all the knowledge, and also helps prevents bottlenecks.
+DevOps is a term emerging from the collision of two major related trends. The first was also called “agile infrastructure” or “agile operations”; it sprang from applying Agile and Lean approaches to operations work. The second is a much expanded understanding of the value of collaboration between development and operations staff throughout all stages of the development lifecycle when creating and operating a service, and how important operations has become in our increasingly service-oriented world.
 
 
-<amp-img src="/assets/img/noops-devops/devopscycle.png"
+By applying DevOps to your current role, you create the ability for your company to deliver applications with high velocity, by using tools, practices and cultural philosophies to improve and evolve faster than tradition software practices that rely on other siloed teams.
+
+
+<amp-img src="/assets/img/devops/multiskilled.png"
+  width="1310"
+  height="1076"
+  layout="responsive">
+</amp-img>
+
+As an engineerm you should be able to work across the full application lifecycle, including (but not limited to) development, testing, deployment and infrastructure, even sometimes quality assurance and infosec. If you make as much of the process  automated as possible, it prevents leaving an individual holding all the knowledge, and also helps prevents bottlenecks between teams waiting on other teams.
+
+Theres a wide school of though online that its the next evolution of software engineers.
+
+<amp-img src="/assets/img/devops/devopscycle.png"
   width="1000"
   height="567"
   layout="responsive">
 </amp-img>
 
 
-## The No Ops Movement
-
-No ops focuses more on the fact that traditionally operations teams that manage and deploy to underlying infrastructure will eventually become obsolete, as the jobs that they would have performed traditionally have evolved, and when moved to the cloud, can and should be performed by multi skilled engineers, focused on the full application lifecycle.
-
 ## Is DevOps adoption growing?
 
+DevOps adoption is certainly growing! The current demand in the market is rapidly increasing. This is primarily because employing DevOps has resulted in great success for companies all around the world for the following reasons:
 
+- Shorter Development Cycles, Faster Innovation
+- Reduced Deployment Failures, Rollbacks, and Time to Recover
+- Improved Communication and Collaboration
+- Reduced Costs and IT Headcount
 
+One thing to remember though is that the process of becoming an expert DevOps engineer is highly complex. You have to be well prepared and organized, and expertise only comes with extreme hard work and by having a good research background.
 
+<amp-img src="/assets/img/devops/devopstrends.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
 
-# How to make the journey to NoOps easier?
+# How to make the transition easier / where to start?
 
 ## Normalising the tech stack
 
@@ -46,61 +66,109 @@ Our deployment pattern took a built artifact, such as a dotnet dll, or node proj
 
 Because of the way ECS works, it was very simple to build secure permissions and apply this across the whole infra. Anything that needs more than just the basics, could apply it manually. Terraform modules really helped with this.
 
+<amp-img src="/assets/img/devops/nodes.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
+
+
 ### Always improving the tech stack
 
 Just because you have a great stack, doesn't mean you should continue to use it until the end of time! 
 
 There are so many great things coming out all the time, for example at ditto music we use ECS, but that is because at the time fargate was not available in London. Now it is, we are evaluating moving our ECS web apps over to Fargate, as this serverless option will have many benefits with reducing complexity of deployments, cheaper to run and more scalable.
 
+
+
 ### Reusable testing patterns
 
+Theres many testing trends out there, but having at least the basics will help reduce complexity, at ditto we use test driven development, unit tests, acceptance criteria to drive the design and automation testing. UI testing using tools like Cypress.js and end to end integration tests for apis and databases really help. Even simple things like integrating coverage reports into your build process will help to keep the code standard high, as well as testing the actual application. 
 
-# Maintainability and openness
+Monitoring tools that not only show the current trend of how an application is performing, but also alerting. At ditto we use a combination of Elasticsearch, AWS cloudwatch logs, and a custom logging service, will all alerts that are deemed important notifying us using slack.
 
-- Logging
-- Metrics gathering
-- Success metrics for projects are visible
-- Configuration managed by a tool
-- Sharing knowledge, and source code
+<amp-img src="/assets/img/devops/unittest.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
+
+
+## Maintainability and openness
+
+### Logging
+
+Logging is so important to make sure you can quickly work out why an application is malfunctioning. Its not only important to log things, its important to know when to act upon it. At ditto we use a combination of tools from Cloudwatch alarms, to elastalert to make sure that we are notified about problematic applications before the customer knows theres a problem.
+
+<amp-img src="/assets/img/devops/slackalert.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
+
+If you can streamline your logging process into one or a few very similar systems, it makes diagnosing issues easier. I'm not a massive fan of cloudwatch logging, but its ok as a minimum. Being able to search over massive amounts of logs is much better using a tool like Elasticsearch.
+
+### Metrics gathering
+
+Its not just gathering logs which is important, you can also gather metrics. Whether its how a user is interacting with you application, or whether a certain resource you rely on is about to run out. There are means and ways to tie all this information and be notified way before theres a problem
+
+<amp-img src="/assets/img/devops/trends.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
+
+### Sharing knowledge, and source code
+
+There are caveats to this, of course you would only ever want to share code, where its safe to do so, for example Team 1 might have a memeber who has just deployed a new application that has created a pattern that Team 2 would benefit from using. The benefit of sharing this process is massively helpful. It's never a good idea for one person to dictate all the decisions, processes will never evolve. Brown bags and information sharing sessions really help with this too!
 
 # Reliability 
 
-- Test infrastructure changes before deploying to production
-- CI/CD
-- Automate infrastructure delivery
-- Automated provisioning
-- Automate security policy configuration
-- Security teams are involved in technology design and deployment
+### CI/CD
+
+Having a solid CI/CD process is one of the most important things. At ditto and places I've worked before, we deliver to production many times a day. Gone are the days where there is a release every 6 weeks. If you want to act fast and make quick business decisions, you need to be able to release fast.
+
+There seems to be a growing trend of containerised CI/CD systems that are awesome, which can spin up as many agents as needed. At ditto we went for GoCD by thoughtworks, and built it in a containerised style. I guess its whatever fits the need
+
+<amp-img src="/assets/img/devops/cicd.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
+
+### Test infrastructure changes before deploying to production
+
+To make sure that you keep your application running as close to 100%, always test your infrastructure changes before a deployment to production. At ditto music, we utilise terraform, and will always perform a terraform plan before an apply.
+
+This will outline what is about to change before it is applied.
+
+Another thing that helps with this is blue/green deployments. This is so straightforward in tech like Elastic Container Service, as you can easily spin up the new instance of a container almost instantly and only switch the load balancer to point to the new instance once it passes all the smoke tests.
+
+<amp-img src="/assets/img/devops/statuscodes.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
+
+### Automate infrastructure delivery
+
+Use tools like terraform (my personal favourite), which enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned. 
 
 
+<amp-img src="/assets/img/devops/terraform.png"
+  width="1350"
+  height="720"
+  layout="responsive">
+</amp-img>
 
 
+### Automate security policy configuration
 
-2. DevOps adoption is growing
-According to RightScale’s 2016 State of the Cloud Survey, more than 80 percent of enterprise companies and 70 percent of small businesses are in the process of adopting DevOps practices. Companies are investing in DevOps more heavily than ever before, and as Puppet’s 2016 State of DevOps Report demonstrates, the investment is paying off. High-performing IT organizations practicing DevOps have 2,555 times faster lead times (the time it takes to go from idea to working software in production), three times lower change failure rates, 24 times faster mean time to recovery (MTTR), and 10 percent less rework than their underperforming counterparts. Needless to say, your DevOps job is likely safe for the foreseeable future.
+Where possible apply security policies at the highest level possible and only allow the smallest amount of changes to security between apps. An example of this is to apply the hardest possible rules, and only allow very specific changes at the IAM layer. At ditto, we use terraform modules to allow us to template our applications, and only add bespoke permissions where needed, limited to the scope of what is needed.
 
-3. NoOps is not one-size-fits-all
-If businesses see those kinds of gains from DevOps, why not skip DevOps and go directly to NoOps? For starters, NoOps is limited to applications that fit into existing PaaS solutions. Many enterprises still have monolithic legacy applications that would require massive upgrades or total rewrites to work in a PaaS environment. Furthermore, new technologies that have no suitable NoOps solution will emerge. As some claim, NoOps is really the next level of DevOps, and we should use DevOps principles and techniques to build NoOps nirvana into all new products.
+e.g. if an application needs to call SQS, then we add a permission to the single application, allowing only for that single application to call a single SQS queue.
 
-4. NoOps fits within the three ways of DevOps
-In The DevOps Handbooks, authors Gene Kim, et al. describe the three ways, which are the principles all DevOps patterns can be derived from. The first way is Flow: the movement of features from left to right through the CI pipeline. NoOps solutions remove friction and increase the flow of valuable features through the pipeline. In other words, NoOps is successful DevOps.
-
-Thesecond way is fast feedback from right to left as features progress through the pipeline. Because NoOps allows us to ship defects as quickly as features, automated controls are necessary at every stage of the pipeline to ensure defects are caught and remediated early. At the scale of modern software applications, even a small defect could have damaging results for a business.
-
-The third way is continuous learning and improvement. NoOps is exemplary for focused learning and improvement over many years to achieve an ideal of frictionless software deployment. NoOps is a culmination of new tools, techniques, and ideas developed through open and continuous collaboration. To say NoOps is the end of DevOps is to say we have nothing left to learn and nothing to improve.
-
-5. Operations happens before production
-With DevOps, much of the traditional IT operations work happens before code reaches production. Every release includes monitoring, logging, and A/B testing. CI/CD pipelines automatically run unit tests, security scanners, and policy checks on every commit. Deployments are automatic. Controls, tasks, and non-functional requirements are now implemented before release instead of during the frenzy and aftermath of a critical outage. Having sysadmins, auditors, security personnel, QA testers, and even key business stakeholders involved from the beginning ensures these automated tasks and controls are in-place, correct, and effective before it’s too late.
-
-6. DevOps is people
-More important than any particular tool or technique is the culture of DevOps. You can’t practice DevOps in a vacuum and expect to succeed. DevOps began when developers and system administrators met at a conference to share ideas and experiences and work toward a common goal. Over time, the community realized it could build better software faster by including members from all areas of business, including QA, security, marketing, and finance. And the community continues to learn and evolve by sharing ideas at meetups, in online forums, on blogs, and through open source software. No matter how many advancements we make, the law of entropy will take over and erode them all if we forget the importance of DevOps culture.
-
-7. DevOps requires continuous learning and improvement
-A major pillar of DevOps is the spirit of continuous learning and improvement. When failures happen, a strong safety culture that practices blameless post mortems is vital for learning from mistakes. Rather than punish and assign blame, which destroys team morale and doesn’t solve the underlying issue, we must understand and improve the systems and processes that allowed the failure to happen in the first place.
-
-Learning and improvement shouldn’t happen only when things go wrong. Everyone should strive to improve their daily work, and organizations should provide incentives for individuals to share their discoveries with the wider organization. With modern IT being a key driver of business success, companies must recognize that turning 10 1x developers into 10 2x developers is twice as effective, and much more realistic, than finding the elusive 10x engineer.
-
-
+# Conclusion
 
 In conclusion, DevOps is forever
-Despite the cries of DevOps demise, NoOps is not the end of DevOps. In fact, NoOps is only the beginning of the innovations we can achieve together with DevOps. The movement started long before DevOps had a name, and the core principles will live on as long as businesses require software to succeed in a fast-paced, rapidly changing technological landscape. In a few years, the name may fade away in favor of a new buzzword, but the culture and the contributions of the DevOps community will live on.
+Despite the cries of DevOps demise, the core principles that DevOps have will live on as long as businesses require software to succeed in a fast-paced, rapidly changing technological landscape. In a few years, the name may fade away in favor of a new buzzword, but the culture and the contributions of the DevOps community will live on.
