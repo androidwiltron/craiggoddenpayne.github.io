@@ -12,15 +12,14 @@ tags: devops, iaas, terraform, aws, engineer,
 
 DevOps is a term emerging from the collision of two major related trends. The first was also called “agile infrastructure” or “agile operations”; it sprang from applying Agile and Lean approaches to operations work. The second is a much expanded understanding of the value of collaboration between development and operations staff throughout all stages of the development lifecycle when creating and operating a service, and how important operations has become in our increasingly service-oriented world.
 
-
-By applying DevOps to your current role, you create the ability for your company to deliver applications with high velocity, by using tools, practices and cultural philosophies to improve and evolve faster than tradition software practices that rely on other siloed teams.
-
-
 <amp-img src="/assets/img/devops/multiskilled.png"
   width="1310"
   height="1076"
   layout="responsive">
 </amp-img>
+
+By applying DevOps to your current role, you create the ability for your company to deliver applications with high velocity, by using tools, practices and cultural philosophies to improve and evolve faster than tradition software practices that rely on other siloed teams.
+
 
 As an engineer, you should be able to work across the full application lifecycle, including (but not limited to) development, testing, deployment and infrastructure, even sometimes quality assurance and infosec. If you make as much of the process  automated as possible, it prevents leaving an individual holding all the knowledge, and also helps prevents bottlenecks between teams waiting on other teams.
 
