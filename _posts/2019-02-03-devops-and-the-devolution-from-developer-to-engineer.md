@@ -130,7 +130,7 @@ Having a solid CI/CD process is one of the most important things. At ditto and p
 
 There seems to be a growing trend of containerised CI/CD systems that are awesome, which can spin up as many agents as needed. At ditto we went for GoCD by thoughtworks, and built it in a containerised style. I guess its whatever fits the need
 
-<amp-img src="/assets/img/devops/cicd.png"
+<amp-img src="/assets/img/devops/cicd2.png"
   width="1036"
   height="224"
   layout="responsive">
