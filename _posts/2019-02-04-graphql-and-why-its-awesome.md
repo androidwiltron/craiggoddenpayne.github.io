@@ -20,7 +20,7 @@ Since all of these apis are new, we need a way to expose some of this data publi
 
 To improve performance, we migrated all of the royalty data out of the monolith and into elasticsearch for many reasons, the main being the current sales area would slow down anything attached to the monolith when  querying a user with a massive amount of releases or sales.
 
-<amp-img src="/assets/img/graphql/diagram.jpeg"
+<amp-img src="/assets/img/graphql/diagram.png"
   width="1616"
   height="1042"
   layout="responsive">
