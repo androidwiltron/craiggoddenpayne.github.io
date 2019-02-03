@@ -6,7 +6,7 @@ readtime: 18 minutes
 tags: noops, devops, iaas, terraform, aws, engineer, 
 ---
 
-*TLDR - DevOps is awesome, DevOps is not scary, NoOps is the future, and using the right tools and patterns will allow you to easily transition from Software Developer to Software Engineer and keep ahead of the trend*
+*TLDR - DevOps is awesome, DevOps is not scary, and using the right tools and patterns will allow you to easily transition from Software Developer to Software Engineer and keep ahead of the trend*
 
 *First its worth having a look at the definiton of what DevOps is,*  bear in mind DevOps is a term that still does not have a solid definitions, and a lot of people get confused as to what it is:
 
@@ -67,8 +67,8 @@ Our deployment pattern took a built artifact, such as a dotnet dll, or node proj
 Because of the way ECS works, it was very simple to build secure permissions and apply this across the whole infra. Anything that needs more than just the basics, could apply it manually. Terraform modules really helped with this.
 
 <amp-img src="/assets/img/devops/nodes.png"
-  width="1350"
-  height="720"
+  width="491"
+  height="181"
   layout="responsive">
 </amp-img>
 
@@ -88,8 +88,8 @@ Theres many testing trends out there, but having at least the basics will help r
 Monitoring tools that not only show the current trend of how an application is performing, but also alerting. At ditto we use a combination of Elasticsearch, AWS cloudwatch logs, and a custom logging service, will all alerts that are deemed important notifying us using slack.
 
 <amp-img src="/assets/img/devops/unittest.png"
-  width="1350"
-  height="720"
+  width="1140"
+  height="726"
   layout="responsive">
 </amp-img>
 
@@ -101,8 +101,8 @@ Monitoring tools that not only show the current trend of how an application is p
 Logging is so important to make sure you can quickly work out why an application is malfunctioning. Its not only important to log things, its important to know when to act upon it. At ditto we use a combination of tools from Cloudwatch alarms, to elastalert to make sure that we are notified about problematic applications before the customer knows theres a problem.
 
 <amp-img src="/assets/img/devops/slackalert.png"
-  width="1350"
-  height="720"
+  width="1300"
+  height="846"
   layout="responsive">
 </amp-img>
 
@@ -113,8 +113,8 @@ If you can streamline your logging process into one or a few very similar system
 Its not just gathering logs which is important, you can also gather metrics. Whether its how a user is interacting with you application, or whether a certain resource you rely on is about to run out. There are means and ways to tie all this information and be notified way before theres a problem
 
 <amp-img src="/assets/img/devops/trends.png"
-  width="1350"
-  height="720"
+  width="958"
+  height="750"
   layout="responsive">
 </amp-img>
 
@@ -131,8 +131,8 @@ Having a solid CI/CD process is one of the most important things. At ditto and p
 There seems to be a growing trend of containerised CI/CD systems that are awesome, which can spin up as many agents as needed. At ditto we went for GoCD by thoughtworks, and built it in a containerised style. I guess its whatever fits the need
 
 <amp-img src="/assets/img/devops/cicd.png"
-  width="1350"
-  height="720"
+  width="1036"
+  height="224"
   layout="responsive">
 </amp-img>
 
@@ -145,8 +145,8 @@ This will outline what is about to change before it is applied.
 Another thing that helps with this is blue/green deployments. This is so straightforward in tech like Elastic Container Service, as you can easily spin up the new instance of a container almost instantly and only switch the load balancer to point to the new instance once it passes all the smoke tests.
 
 <amp-img src="/assets/img/devops/statuscodes.png"
-  width="1350"
-  height="720"
+  width="1620"
+  height="1312"
   layout="responsive">
 </amp-img>
 
@@ -156,8 +156,8 @@ Use tools like terraform (my personal favourite), which enables you to safely an
 
 
 <amp-img src="/assets/img/devops/terraform.png"
-  width="1350"
-  height="720"
+  width="520"
+  height="313"
   layout="responsive">
 </amp-img>
 
