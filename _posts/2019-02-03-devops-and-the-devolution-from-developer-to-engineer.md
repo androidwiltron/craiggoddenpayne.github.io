@@ -23,7 +23,7 @@ By applying DevOps to your current role, you create the ability for your company
 
 As an engineer, you should be able to work across the full application lifecycle, including (but not limited to) development, testing, deployment and infrastructure, even sometimes quality assurance and infosec. If you make as much of the process  automated as possible, it prevents leaving an individual holding all the knowledge, and also helps prevents bottlenecks between teams waiting on other teams.
 
-Theres a wide school of though online that its the next evolution of software engineers.
+Theres a wide school of thought online that its the next evolution of software engineers.
 
 <amp-img src="/assets/img/devops/devopscycle.png"
   width="1000"
@@ -41,7 +41,7 @@ DevOps adoption is certainly growing! The current demand in the market is rapidl
 - Improved Communication and Collaboration
 - Reduced Costs and IT Headcount
 
-One thing to remember though is that the process of becoming an expert DevOps engineer is highly complex. You have to be well prepared and organized, and expertise only comes with extreme hard work and by having a good research background.
+One thing to remember though, is that the process of becoming an expert DevOps engineer is highly complex. You have to be well prepared and organized, and expertise only comes with extreme hard work and by having a good research background.
 
 <amp-img src="/assets/img/devops/devopstrends.png"
   width="1350"
@@ -119,7 +119,7 @@ Its not just gathering logs which is important, you can also gather metrics. Whe
 
 ### Sharing knowledge, and source code
 
-There are caveats to this, of course you would only ever want to share code, where its safe to do so, for example Team 1 might have a memeber who has just deployed a new application that has created a pattern that Team 2 would benefit from using. The benefit of sharing this process is massively helpful. It's never a good idea for one person to dictate all the decisions, processes will never evolve. Brown bags and information sharing sessions really help with this too!
+There are caveats to this, of course you would only ever want to share code, where its safe to do so, for example Team 1 might have a member who has just deployed a new application that has created a pattern that Team 2 would benefit from using. The benefit of sharing this code and process is massively helpful. It's never a good idea for one person to dictate all the decisions, processes will never evolve. Brown bags and information sharing sessions really help with this too!
 
 # Reliability 
 
@@ -169,5 +169,4 @@ e.g. if an application needs to call SQS, then we add a permission to the single
 
 # Conclusion
 
-In conclusion, DevOps is forever
-Despite the cries of DevOps demise, the core principles that DevOps have will live on as long as businesses require software to succeed in a fast-paced, rapidly changing technological landscape. In a few years, the name may fade away in favor of a new buzzword, but the culture and the contributions of the DevOps community will live on.
+In conclusion, DevOps is forever despite the cries of DevOps demise, the core principles that DevOps have will live on as long as businesses require software to succeed in a fast-paced, rapidly changing technological landscape. In a few years, the name may fade away in favor of a new buzzword, but the culture and the contributions of the DevOps community will live on.
