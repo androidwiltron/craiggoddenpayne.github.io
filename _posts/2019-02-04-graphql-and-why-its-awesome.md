@@ -16,7 +16,7 @@ We have a whole host of backend internal services, which allow us to look up dom
 
 At present though, we are dependent on a single huge monolith database which holds all data about pretty much everything about the business.
 
-<amp-img src="/assets/img/graphql/monolith.jpeg"
+<amp-img src="/assets/img/graphql/monolith.png"
   width="852"
   height="874"
   layout="responsive">
