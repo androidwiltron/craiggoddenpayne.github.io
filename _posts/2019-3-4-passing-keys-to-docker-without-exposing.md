@@ -22,7 +22,9 @@ Here is an example of how we achieved this by proxying the build agent id_rsa fr
 
 ## Thoughts:
 
-In order for the docker build to pass, the dockerfile will need to be referencing the rsa key to be able to pull the code from github. Luckiliy, the docker agent is already pulling from github, and already has access to an account, which can access the npm module.
+In order for the docker build to pass, the docker image will need to be referencing the rsa key added to the github repo, to be able to pull the code from github. 
+
+Luckiliy, the docker agent is already pulling from github, and already has access to an account, which can access the npm module.
 
 ## Process:
 
