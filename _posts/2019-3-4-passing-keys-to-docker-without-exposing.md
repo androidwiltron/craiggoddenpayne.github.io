@@ -8,25 +8,23 @@ tags: docker rsa
 
 At ditto, we use a docker build agent, for building our docker images and pushing to our private docker repository. 
 
-This works really well for us, but there are times where you might want to say pass an rsa key to the docker image, which you would want to hide away deom view.
+This works really well for us, but there are times where you might want to say pass an rsa key to the docker image, which you would want to hide away from other devs.
 
-Here is an example of how we achieved this using GOCD.
+Here is an example of how we achieved this by proxying the build agent id_rsa from the build agent to the docker image.
 
+## Situation:
 
-Situation:
+- We have a dockerfile, which our agent wants to build.
 
-We have a dockerfile, which our agent wants to build.
+- As part of the docker build, we want to run npm install.
 
-As part of the docker build, we want to run npm install.
+- The node project references a package in github that is hosted privately.
 
-The node project references a package in github that is hosted privately.
-
-Thoughts:
+## Thoughts:
 
 In order for the docker build to pass, the dockerfile will need to be referencing the rsa key to be able to pull the code from github. Luckiliy, the docker agent is already pulling from github, and already has access to an account, which can access the npm module.
 
-Process:
-
+## Process:
 
 In our build agent, we update the command to pass its id_rsa and id_rsa.pub key to our dockerfile, as a build argument
 
