@@ -15,7 +15,11 @@ tags: docker rsa
   layout="responsive">
 </amp-img>
 
-...said no developer ever!! Yet its something that happens all the time. There are some great options out there, but the last 3 or 4 years or so, I have worked exclusively on the mainline using feature toggles. The worst merge conflicts I've had to deal with are when a couple of developers have worked on conflicting code, and its only every at most a couple days old.
+...said no developer ever!! 
+
+Yet its something that happens all the time. There are some great options out there, but the last 3 or 4 years or so, I have worked exclusively on the mainline using feature toggles.
+
+The worst merge conflicts I've had to deal with are when a couple of developers have worked on conflicting code, and its only ever at most a couple days old.
 
 <amp-img src="/assets/img/mainline/merge.png"
   width="1184"
@@ -25,9 +29,15 @@ tags: docker rsa
 
 ### An example of how easy it is to get into a pickle
 
-A team of developers are building your new product, you have an upcoming release, sometime in the near future, and everything is being commited and merged into a branch called v1.1.0. You realise before release day, that theres a few bugs which need an emergency fix, so they get fixed on master. Suddenly you need to merge your changes up from master to v1.1.0, but there is weeks worth of work in that branch and also a massive refactor. 
+A team of developers are building your new product, you have an upcoming release, sometime in the near future, and everything is being commited and merged into a branch called v1.1.0. 
 
-A week has passed, just to merge the two different branches together, 4 devs have been unable to do any work, and the two devs working on the merge look really stressed out!! Its also added a few more days to test, and because of lack of confidence, one of the devs has suggested another manual test phase because they were unsure that the merge conflict may have had side effects on other code.
+You realise before release day, that theres a few bugs which need an emergency fix, so they get fixed on master. 
+
+Suddenly you need to merge your changes up from master to v1.1.0, but there is weeks worth of work in that branch and also a massive refactor. 
+
+A week has passed, just to merge the two different branches together, 4 devs have been unable to do any work, and the two devs working on the merge look really stressed out!! 
+
+It's also added a few more days to test, and because of lack of confidence, one of the devs has suggested another manual test phase because they were unsure that the merge conflict may have had side effects on other code.
 
 <amp-img src="/assets/img/mainline/panic.png"
   width="868"
@@ -105,7 +115,9 @@ Imagine letting 5% of your users test your amazing new feature before you roll i
 
 ### Isnt this going to add a massive amount of complexity to an application?
 
-That depends. How complex are you going to make it? Some things to bear in mind is once a feature is completed, the toggle should be removed completely, this disolves confusion. You should treat the toggles like a branch too, the longer you leave it, the more ingrained into the application it becomes. Try to keep toggles in for as short time as possible. 
+That depends. How complex are you going to make it? Some things to bear in mind is once a feature is completed, the toggle should be removed completely, this disolves confusion. 
+
+You should treat the toggles like a branch too, the longer you leave it, the more ingrained into the application it becomes. Try to keep toggles in for as short time as possible. 
 
 Use best development practices like dependency injection to provide two different concretions and use the toggle to choose between the two concretions.
 
