@@ -1,11 +1,10 @@
 ---
 layout: post
-title: 'Living in Utopia (Mainline Development and feature toggles)'
+title: Living in Utopia with Mainline Development
 image: /assets/img/mainline/cover.png
-readtime: 3 minutes
-tags: docker rsa
+readtime: 12 minutes
+tags: features toggles mainline 
 ---
-
 
 ### I love a good merge conflict me
 
@@ -29,7 +28,7 @@ The worst merge conflicts I've had to deal with are when a couple of developers 
 
 ### An example of how easy it is to get into a pickle
 
-A team of developers are building your new product, you have an upcoming release, sometime in the near future, and everything is being commited and merged into a branch called v1.1.0. 
+A team of developers are building your new product, you have an upcoming release sometime in the near future, and everything is being commited and merged into a branch called v1.1.0. 
 
 You realise before release day, that theres a few bugs which need an emergency fix, so they get fixed on master. 
 
@@ -115,7 +114,9 @@ Imagine letting 5% of your users test your amazing new feature before you roll i
 
 ### Isnt this going to add a massive amount of complexity to an application?
 
-That depends. How complex are you going to make it? Some things to bear in mind is once a feature is completed, the toggle should be removed completely, this disolves confusion. 
+That depends. How complex are you going to make it?
+
+Some things to bear in mind is once a feature is completed, the toggle should be removed completely, this disolves confusion. 
 
 You should treat the toggles like a branch too, the longer you leave it, the more ingrained into the application it becomes. Try to keep toggles in for as short time as possible. 
 
