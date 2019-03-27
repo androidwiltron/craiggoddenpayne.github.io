@@ -97,19 +97,181 @@ The following steps take place:
 - Terraform Apply - manually triggered after someone reviewing the infrastructure plan. This will apply the changes to infrastructure, which in turn applies the new version of the ECS task, which causes a blue green deployment.
 - The same template would be then chained on from the previous environment, allowing us to force a pipeline like Build → QA → Prod
 
+### How does this work in terraform then?
+
+Example using our terraform module:
+
+```
+module "ecs-web-app" {
+  source                  = "git::git@github.com:**********/terraform-modules.git//aws-ecs-ec2?ref=v1.0.37"
+  app_name                = "${var.app_name}"
+  region                  = "${var.region}"
+  application_version     = "${var.application_version}"
+  task_memory             = "${var.memory}"
+  container_port          = "${var.container_port}"
+  attach_to_load_balancer = "internal"
+  lb_pattern              = "/path*"
+  lb_rule_number          = 6
+  desired_count           = 2
+  health_check_period     = 30
+}
+
+```
+
+In actual terraform, we create something similar to the following:
+
+```
+resource "aws_ecs_service" "ecs-service-with-loadbalancer" {
+  name                              = "${var.app_name}"
+  cluster                           = "${data.aws_ecs_cluster.app-container-host.id}"
+  task_definition                   = "${aws_ecs_task_definition.definition.arn}"
+  scheduling_strategy               = "REPLICA"
+  desired_count                     = "${var.desired_count}"
+  health_check_grace_period_seconds = "${var.health_check_period}"
+  iam_role                          = "${aws_iam_role.api.name}"
+
+  ordered_placement_strategy {
+    type  = "spread"
+    field = "host"
+  }
+
+  load_balancer {
+    container_name   = "${var.app_name}"
+    container_port   = "${var.container_port}"
+    target_group_arn = "${aws_lb_target_group.api.arn}"
+  }
+}
+
+```
+
+```
+data "aws_lb" "internal" {
+  name = "ditto-website-alb-internal"
+}
+
+data "aws_alb_listener" "internal" {
+  load_balancer_arn = "${data.aws_lb.internal.arn}"
+  port              = 443
+}
+
+resource "aws_lb_target_group" "api" {
+  protocol   = "HTTP"
+  vpc_id     = "${data.aws_vpc.vpc.id}"
+  name       = "${var.app_name}"
+  port       = 80
+  slow_start = 0
+}
+
+resource "aws_lb_listener_rule" "api" {
+  listener_arn = "data.aws_alb_listener.public.arn"
+  priority     = "${var.lb_rule_number}"
+
+  action {
+    type             = "forward"
+    target_group_arn = "${aws_lb_target_group.api.arn}"
+  }
+
+  condition {
+    field  = "path-pattern"
+    values = ["${var.lb_pattern}"]
+  }
+}
+```
+
+```
+resource "aws_ecs_task_definition" "definition" {
+  family             = "${var.app_name}"
+  network_mode       = "bridge"
+  task_role_arn      = "${aws_iam_role.api.arn}"
+  execution_role_arn = "${aws_iam_role.api.arn}"
+
+  container_definitions = <<DEFINITION
+[
+  {
+    "name": "${var.app_name}",
+    "image": "${data.aws_caller_identity.current.account_id}.dkr.ecr.eu-west-2.amazonaws.com/${var.app_name}:${var.application_version}",
+    "essential": true,
+    "privileged": true,
+    "memoryReservation": ${var.task_memory},
+    "portMappings": [
+      {
+        "containerPort": ${var.container_port},
+        "protocol": "tcp"
+      }
+    ],
+    "environment": [
+      {
+          "name": "ApplicationVersion",
+          "value": "${var.application_version}"
+      }
+    ],
+    "requiresAttributes": [
+        {
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.ecr-auth",
+        "targetId": null,
+        "targetType": null
+        },
+        {
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.task-iam-role",
+        "targetId": null,
+        "targetType": null
+        },
+        {
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19",
+        "targetId": null,
+        "targetType": null
+        }
+    ]
+  }
+]
+DEFINITION
+}
+
+```
 
 ### How this looks in AWS
 
-Container images are maintained in ECR, so we can roll back to any version if needed: 
-
-Tasks are maintained within ECS, and we can scale to as many instances as we need to support the demand.
+Container images are maintained in ECR, so we can roll back to any version if needed.
 
 Deployment is triggered, tasks are marked as inactive in AWS
 
+<amp-img src="/assets/img/bluegreen/2.png"
+  width="2292"
+  height="438"
+  layout="responsive">
+</amp-img>
+
 The new task is started, and enters a pending state
+
+<amp-img src="/assets/img/bluegreen/3.png"
+  width="2300"
+  height="562"
+  layout="responsive">
+</amp-img>
 
 The new task starts successfully, and a health check is performed from the load balancer to container:port
 
+<amp-img src="/assets/img/bluegreen/4.png"
+  width="2294"
+  height="562"
+  layout="responsive">
+</amp-img>
+
 After 30 seconds or so, the old version of the containers are taken out of the cluster
 
+<amp-img src="/assets/img/bluegreen/5.png"
+  width="2298"
+  height="430"
+  layout="responsive">
+</amp-img>
+
 Here is an example of the log, which shows the blue green deployment.
+
+<amp-img src="/assets/img/bluegreen/6.png"
+  width="2270"
+  height="546"
+  layout="responsive">
+</amp-img>
