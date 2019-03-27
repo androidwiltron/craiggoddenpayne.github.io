@@ -74,9 +74,9 @@ The deployment to the environment is completely automated, which means we can mo
 The following steps take place:
 
 - Fetch - which is triggered from a commit to git. The code is pulled from github onto the agent
-- Build-Build - auto triggered and ran in parallel, which runs a script called build.sh A typical build.sh is shown below
-- Build-Test - auto triggered and ran in parallel, which runs a script called test.sh A typical test.sh is shown below
-- Build-Test-Report - auto triggered and ran in parallel, which runs a script called test-report.sh A typical test-report.sh is shown below (I think the coverage threshold is set to 80%)
+- Build-Build - auto triggered and ran in parallel, which runs a script called build.sh
+- Build-Test - auto triggered and ran in parallel, which runs a script called test.sh
+- Build-Test-Report - auto triggered and ran in parallel, which runs a script called test-report.sh 
 - Build-Terraform-Build - auto triggered, which takes terraform configuration files and zips them up
 - Upload - which is auto triggered, uploads the above build artifacts, and stores them in S3, alongside the current version
 
