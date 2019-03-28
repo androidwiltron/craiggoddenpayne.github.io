@@ -17,7 +17,7 @@ layout: default
 
 @media (min-width: 768px) {
   .article-highlight {
-    width:50%;
+    width:33%;
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
@@ -32,6 +32,7 @@ layout: default
 .article-highlight-info{
   flex-grow:8;
   flex: 70%;
+  width: 100%;
 }
 
 .article-highlight-cover img {
@@ -40,7 +41,7 @@ layout: default
 }
 </style>
 
-<div class="container snippet-articles">
+<div class="container snippet-articles" style="opacity: 0.90!important;">
   {% for post in site.posts %}
   <div class="article-highlight">
     <div class="article-highlight-cover">
@@ -50,8 +51,8 @@ layout: default
     </div>
     <div class="article-highlight-info">
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">    
-        <h4>{{ post.title }}</h4>         
         <p class="post-date">{{ post.date | date: "%B %e, %Y" }}.</p>
+        <h4>{{ post.title }}</h4>         
         <p class="short-intro">{{ post.content | strip_html | truncatewords: 30 }}</p>               
       </a>
     </div>  

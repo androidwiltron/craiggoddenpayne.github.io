@@ -6,9 +6,7 @@ readtime: 10 minutes
 tags: altcover reportgenerator code coverage dotnet core
 ---
 
-AltCover is awesome!!
-
-https://github.com/SteveGilham/altcover/wiki/Usage
+[AltCover](https://github.com/SteveGilham/altcover/wiki/Usage) is awesome!!
 
 
 ### Code coverage for dotnet core
