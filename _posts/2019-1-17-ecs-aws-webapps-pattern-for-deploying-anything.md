@@ -2,13 +2,9 @@
 layout: post
 title: ECS AWS WebApps - A simple pattern for deploying anything quickly using terraform 
 image: /assets/img/ecs-aws/cover.jpg
-readtime: 3 minutes
+readtime: 6 minutes
 tags: AWS ECS Docker Terraform
 ---
-
-THIS POST IS STILL IN PROGRESS
-
-
 
 One of the best things I like about infrastructure as code, and terraform in particular, is the ability to quickly, and securely deploying something, based on a pattern that you know works.
 
@@ -25,7 +21,7 @@ Above is a high level overview of what we've deemed a ecs web app. As you can se
 We have multiple subnets within our VPC which have specific rules, but the ECS applications are deployed within our "private" subnet, so they are not accessible from the outside. 
 
 
-One of my favourite things about terraform is modules. It allows you to pretty much template a load of other resources, so you can deploy a very predicatable set of things.
+One of my favourite things about terraform is modules. It allows you to pretty much template a load of other resources, so you can deploy a very predictable set of things.
 
 
 Here is an example of what we use
@@ -48,7 +44,7 @@ module "ecs-web-app" {
 
 This describes a single web app. In this case, an example is a reporting app, which could be say a node app. We inject the properties in, such as the region we want to deploy to, which load balancer to attach to (public, internal or none at all), the amount of instances needed, when to do health checks etc.
 
-Ecs service definition
+#### ECS service definition
 
 ```
 resource "aws_ecs_service" "ecs-service-with-loadbalancer" {
@@ -85,7 +81,7 @@ resource "aws_ecs_service" "ecs-service-without-loadbalancer" {
 
 ```
 
-Below is the iam role definition. (I've removed the iam policy information for security reasons)
+#### Below is the iam role definition. (I've removed the iam policy information for security reasons)
 
 ```
 resource "aws_iam_role" "api" {
@@ -116,7 +112,7 @@ output "iam-role-name" {
 }
 ```
 
-Load balancer setup (Some information removed for security reasons)
+#### Load balancer setup (Some information removed for security reasons)
 
 ```
 data "aws_lb" "internal" {
@@ -162,7 +158,7 @@ resource "aws_lb_listener_rule" "api" {
 }
 ```
 
-Task definition 
+#### Task definition 
 
 ```
 resource "aws_ecs_task_definition" "definition" {
@@ -218,7 +214,7 @@ DEFINITION
 
 ```
 
-and finally the variables
+#### and finally the variables
 
 ```
 variable "app_name" {}
@@ -268,7 +264,12 @@ COPY . .
 ENV Environment="qa"
 ENV AwsRegion="eu-west-2"
 ENV ApplicationVersion="{APPLICATION_VERSION}"
-ENV LoggingUrl="https://internal.qa.dittomusic.com/logging-api/"
-
-ENTRYPOINT ["dotnet", "sales-import-api.dll"]
+ENTRYPOINT ["dotnet", "my-application.dll"]
 ```
+
+<amp-img src="/assets/img/ecs-webapps/infrastructure.png"
+  width="1498"
+  height="1332"
+  layout="responsive">
+</amp-img>
+
