@@ -12,7 +12,7 @@ I know there are tools out there like beats, which can do something similar, but
 
 At the time they had no form of logging in place at the time, and a lot of outages, so it made sense to have some way to visualise with something like elasticsearch.
 
-<amp-img src="/assets/img/network-logging/elastic.png"
+<amp-img src="/assets/img/network-logging/elasticsearch.png"
   width="558"
   height="300"
   layout="responsive">
