@@ -8,7 +8,7 @@ tags: remote
 
 ### What is is like to work remotely?
 
-I had visions of working in the garden on sunny days, a different coffee shop every day, working late some days and finishing earlier others so I could take my daughter to the park after school. But I also had fears, fears exactly like what everyone says will happen when you remote work, like how will I make an impression, or will I be a forgotten member of staff? Will I struggle to fit in with the team? How would remote pairing, code reviews and general collaboration work?
+I had visions of working in the garden on sunny days, a different coffee shop every day, working late some days and finishing earlier others so I could take my daughter to the park after school. But I also had fears, fears exactly like what everyone says will happen when you remote work, like how will I make an impression, or will I be a forgotten member of staff? Will I struggle to fit in with the team? How would remote pairing work, code reviews and general collaboration?
 
 <amp-img src="/assets/img/remoteworking/coffee.png"
   width="1362"
