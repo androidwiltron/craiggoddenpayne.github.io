@@ -20,7 +20,7 @@ Well the reality was everything I wanted and almost none of the negative stuff. 
 
 I feel like my work life balance increased massively in favour of life, I was so much less stressed and I could suddenly think very clearly! I loved the company I worked for, gave it my all, and went way above and beyond because work no longer felt like work, and suddenly I was getting paid to build cool stuff and all of the politics that can happen in an office just faded away!
 
-A few things that I think really helped was I was strict when I was to start and finish work. I made an effort to go into the office and mix with people, and make sure to spend time at the pub with other members of the team occasionally.
+A few things that I think really helped was I was strict when I was to start and finish work. I made an effort to go into the office and mix with people, and made sure to spend time at the pub with other members of the team occasionally.
 
 <amp-img src="/assets/img/remoteworking/pub.png"
   width="944"
