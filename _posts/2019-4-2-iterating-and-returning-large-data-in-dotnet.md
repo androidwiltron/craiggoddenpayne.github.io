@@ -47,7 +47,7 @@ Example of the controller method
 [HttpGet]
 [SwaggerResponse(HttpStatusCode.OK, typeof(ExportDataByMonth))]
 [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
-public IActionResult ExportByFiltered(int month, int year)
+public void ExportByFiltered(int month, int year)
 {
     try
     {
@@ -56,30 +56,31 @@ public IActionResult ExportByFiltered(int month, int year)
         Response.ContentType = "text/plain";
         Response.Headers["Content-Disposition"] = $"attachment; filename=\"export-by-filtered-{year}-{month}.csv\"";
         
-        var streamWriter = new StreamWriter(Response.Body);
-        var csvStream = new CsvWriter(streamWriter);
-        var exportData = _graphQlRepository.GetFilteredExport(userId.Value, month, year, countryList, storeList);
-        if (!exportData.Any())
-            csvStream.WriteRecords(new[] {new {message = "No data was found during this period."}});
-        else
+        using(var streamWriter = new StreamWriter(Response.Body))
+        using (var csvStream = new CsvWriter(streamWriter))
         {
-            foreach (IEnumerable<object> value in exportData)
+            var exportData = _graphQlRepository.GetFilteredExport(userId.Value, month, year);
+            if (!exportData.Any())
+                csvStream.WriteRecords(new[] {new {message = "No data was found during this period."}});
+            else
             {
-                csvStream.WriteRecords(value);
-                Response.Body.Flush();
+                foreach (IEnumerable<object> value in exportData)
+                {
+                    csvStream.WriteRecords(value);
+                    Response.Body.Flush();
+                }
             }
-        }
 
-        csvStream.Flush();
-        Response.Body.Flush();
+            streamWriter.Flush();
+            csvStream.Flush();
+            Response.Body.Flush();
+        }
     }
     catch (Exception e)
     {
         _logger.Error(e);
         throw;
     }
-
-    return Ok();
 }
 ```
 
