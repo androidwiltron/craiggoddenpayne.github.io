@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Returning large data iteratively in dotnet core.
-image: /assets/img/remoteworking/cover.png
+image: /assets/img/yielding-large-results/cover.png
 readtime: 5 minutes
-tags: remote
 ---
 
 ### Scenario
